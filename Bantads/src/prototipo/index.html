@@ -33,7 +33,7 @@
       <div class="text-center">
         <h1 class="text-primary display-3 c-title">
           <img src="assets/simboloBanco.jpg" class="c-logo-large" alt="Logo do Sistema" />
-          Bantads
+          BANTADS
         </h1>
         <span class="text-secondary c-subtitle">
           Internet Banking do <strong>TADS</strong><sup>&copy;</sup>
@@ -45,19 +45,16 @@
           <!-- Formulário de login -->
           <form id="form-login" action="#" method="POST" class="card">
             <h2 class="card-header">Entrar</h2>
-            <img class="card-img-top" src="assets/cover.jpg" alt="Capa">
+            <img class="card-img-top" src="assets/dinheiros.jpg" alt="Capa">
             <div class="card-body">
               <a class="card-text mt-1">
-                Você está prestes a acessar o sistema SAC (Serviço de Atendimento ao Cliente) da empresa mais top
-                que existe no mundo, a <strong>Embuste</strong><sup>&copy;</sup>. Tenha em mente todos os
-                <a href="#">Termos de Uso</a> da plataforma e de que qualquer irregularidade pode resultar
-                infração dos termos do contrato.
+                Acesse a sua conta <strong>BANTADS</strong>.
               </p>
               <p class="card-text mb-5">
-                Para acessar o sistema, é necessário fornecer suas credenciais de acesso:
+                Realize o login com as suas credenciais:
               </p>
               <div class="form-group">
-                <label for="email">Endereço de email:</label>
+                <label for="email">E-mail:</label>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
@@ -68,7 +65,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="senha">Senha de acesso:</label>
+                <label for="senha">Senha:</label>
                 <div class="input-group mb-3">
                   <div class="input-group-prepend">
                     <span class="input-group-text">
@@ -117,18 +114,10 @@
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text">
-                    <i class="far fa-calendar-alt"></i>
-                  </span>
-                </div>
-                <input type="date" class="form-control" name="data_nasc" placeholder="Data de nascimento" />
-              </div>
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">
                     <i class="fas fa-at"></i>
                   </span>
                 </div>
-                <input type="email" class="form-control" name="email" placeholder="Email de acesso" />
+                <input type="email" class="form-control" name="email" placeholder="E-mail de acesso" />
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -136,7 +125,15 @@
                     <i class="fas fa-mobile-alt"></i>
                   </span>
                 </div>
-                <input type="number" class="form-control" name="telefone" placeholder="Telefone (con DDD)" />
+                <input type="number" class="form-control" name="telefone" placeholder="Telefone (com DDD)" />
+              </div>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-money-bill"></i>
+                  </span>
+                </div>
+                <input type="number" class="form-control" name="salario" placeholder="Salário" />
               </div>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -183,26 +180,12 @@
                     <i class="fas fa-unlock-alt"></i>
                   </span>
                 </div>
-                <input type="password" class="form-control" name="senha1" placeholder="Senha de acesso" />
-              </div>
-              <div class="input-group mb-4">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    <i class="fas fa-unlock-alt"></i>
-                  </span>
-                </div>
-                <input type="password" class="form-control" name="senha2" placeholder="Repetir senha" />
-              </div>
-              <div class="custom-control custom-switch mb-2">
-                <input type="checkbox" class="custom-control-input" id="termos-de-uso" name="termos" />
-                <label class="custom-control-label" for="termos-de-uso">
-                  Aceito os <a href="#">Termos de Uso</a> do serviço <strong>Reclame Ali<sup>&copy;</sup></strong>
-                </label>
+                <input type="password" class="form-control" name="senha" placeholder="Senha de acesso" />
               </div>
             </div>
             <div class="card-footer text-center">
               <button type="click" class="btn btn-lg btn-primary w-50">
-                Cadastrar
+                Criar Conta
               </button>
             </div>
           </form>
@@ -223,7 +206,7 @@
           <div class="modal-body">
             <div class="list-group text-center w-100">
               <a href="cliente/index.html" class="text-primary list-group-item list-group-item-action list-group-item-light">Cliente</a>
-              <a href="funcionario/index.html" class="text-primary list-group-item list-group-item-action list-group-item-light">Funcionário</a>
+              <a href="administrador/index.html" class="text-primary list-group-item list-group-item-action list-group-item-light">Administrador</a>
               <a href="gerente/index.html" class="text-primary list-group-item list-group-item-action list-group-item-light">Gerente</a>
             </div>
           </div>
