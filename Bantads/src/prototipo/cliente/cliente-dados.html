@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>
-      RECLAME ALI :: [Trabalho Web 2 (parte 1) - Protótipo]
+      BANTADS :: [Trabalho DAC (parte 1) - Protótipo]
     </title>
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/fontawesome.min.css" />
@@ -32,8 +32,8 @@
     <header class="container-fluid bg-dark mb-5">
       <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
         <a class="navbar-brand" href="index.html">
-          <img src="../assets/reclame-ali-white.png" width="30" height="30" class="d-inline-block align-top" alt="Logo do sistema" />
-          <span class="text-white-50 h4 c-title">Reclame Ali</span>
+          <img src="../assets/simboloBancoInvertido.jpg" width="33" height="33" class="d-inline-block align-top" alt="Logo do sistema" />
+          <span class="text-white-50 h4 c-title">BANTADS</span>
         </a>
         <div class="container">
           <ul class="navbar-nav text-white">
@@ -41,10 +41,22 @@
               <a class="nav-link" href="index.html">Início</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="atendimentos.html">Meus Atendimentos</a>
+              <a class="nav-link active" href="cliente-dados.html">Alteração de Perfil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="cliente-dados.html">Meus Dados</a>
+              <a class="nav-link" href="depositar.html">Depositar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="saque.html">Saque</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="transferencia.html">Trânsferência</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="saldo.html">Consulta de Saldo atual</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="extrato.html">Consulta de extrato</a>
             </li>
           </ul>
         </div>
@@ -127,6 +139,17 @@
                   </span>
                 </div>
                 <input type="text" id="cliente-telefone" class="form-control" value="(41) 99988-8777" />
+              </div>
+              <div class="form-group">
+                <label for="cliente-telefone">Salário:</label>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="fas fa-money-bill"></i>
+                    </span>
+                  </div>
+                  <input type="number" class="form-control" name="salario" placeholder="Salário" />
+                </div>
               </div>
             </div>
           </div>

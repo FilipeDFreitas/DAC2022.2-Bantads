@@ -41,10 +41,22 @@
               <a class="nav-link active" href="index.html">Início</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="atendimentos.html">Meus Atendimentos</a>
+              <a class="nav-link" href="cliente-dados.html">Alteração de Perfil</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cliente-dados.html">Meus Dados</a>
+              <a class="nav-link" href="depositar.html">Depositar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="saque.html">Saque</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="transferencia.html">Trânsferência</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="saldo.html">Consulta de Saldo atual</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="extrato.html">Consulta de extrato</a>
             </li>
           </ul>
         </div>
@@ -63,27 +75,87 @@
         Bem-vindo(a), <strong>[nome do cliente]</strong>
       </h2>
       <div class="row">
-        <div class="card-deck">
+        <div class="form-group">
+          <label for="cliente-telefone">Saldo Atual:</label>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fas fa-money-bill"></i>
+              </span>
+            </div>
+            <input type="number" class="form-control" name="salario" placeholder="Salário" />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="card-deck" style="width: 180rem;">
           <div class="card border border-primary text-primary">
             <div class="card-body text-center">
-              <p class="card-text display-3">
-                <strong>2</strong>
+              <p class="card-text display-4">
+                <strong>
+                    <i class="fas fa-user"></i>
+                </strong>
               </p>
-              <p class="card-text h6">
-                atendimento(s)<br> em aberto
+              <p class="card-text h8">
+                Alterar<br> perfil
               </p>
-              <a href="atendimentos.html" class="stretched-link h-0"></a>
+              <a href="cliente-dados.html" class="stretched-link h-0"></a>
             </div>
           </div>
           <div class="card border border-primary text-primary">
             <div class="card-body text-center">
-              <p class="card-text display-3">
-                <i class="fas fa-plus"></i>
+              <p class="card-text display-4">
+                <i class="fas fa-download"></i>
               </p>
-              <p class="card-text h6">
-                Solicitar Atendimento
+              <p class="card-text h7">
+                Depositar
               </p>
-              <a href="atendimentos-form.html" class="stretched-link h-0"></a>
+              <a href="depositatar.html" class="stretched-link h-0"></a>
+            </div>
+          </div>
+          <div class="card border border-primary text-primary">
+            <div class="card-body text-center">
+              <p class="card-text display-4">
+                <i class="fas fa-money-bill"></i>
+              </p>
+              <p class="card-text h8">
+                Saque
+              </p>
+              <a href="saque.html" class="stretched-link h-0"></a>
+            </div>
+          </div>
+          <div class="card border border-primary text-primary">
+            <div class="card-body text-center">
+              <p class="card-text display-4">
+                <i class="fas fa-share"></i>
+              </p>
+              <p class="card-text h8">
+                Transferência
+              </p>
+              <a href="transferencia.html" class="stretched-link h-0"></a>
+            </div>
+          </div>
+          <div class="card border border-primary text-primary">
+            <div class="card-body text-center">
+              <p class="card-text display-4">
+                <i class="fas fa-dollar-sign"></i>
+              </p>
+              <p class="card-text h8">
+                Saldo
+              </p>
+              <a href="saldo.html" class="stretched-link h-0"></a>
+            </div>
+          </div>
+          <div class="card border border-primary text-primary">
+            <div class="card-body text-center">
+              <p class="card-text display-4">
+                <i class="fa fa-list-alt"></i>
+              </p>
+              <p class="card-text h8">
+                Extrato
+              </p>
+              <a href="extrato.html" class="stretched-link h-0"></a>
             </div>
           </div>
         </div>
