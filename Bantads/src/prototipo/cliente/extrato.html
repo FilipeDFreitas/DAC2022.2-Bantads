@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+        BANTADS :: [Trabalho DAC (parte 1) - Protótipo]
+      </title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+
+    <!-- Cabeçalho de aviso de prototipagem -->
+    <div class="conteiner-fluid bg-dark">
+      <div class="d-flex justify-content-between text-white">
+        <div><small><b>Protótipo Funcional do Sistema</b></small></div>
+        <div>
+          <small>
+            <b>Visões:</b>
+            <a href="../cliente/index.html">Cliente</a> |
+            <a href="../funcionario/index.html">Funcionário</a> |
+            <a href="../gerente/index.html">Gerente</a>
+          </small>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cabeçalho da página -->
+    <header class="container-fluid bg-dark mb-5">
+      <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
+        <a class="navbar-brand" href="index.html">
+          <img src="../assets/simboloBancoInvertido.jpg" width="33" height="33" class="d-inline-block align-top" alt="Logo do sistema" />
+          <span class="text-white-50 h4 c-title">BANTADS</span>
+        </a>
+        <div class="container">
+          <ul class="navbar-nav text-white">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cliente-dados.html">Alteração de Perfil</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="depositar.html">Depositar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="saque.html">Saque</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="transferencia.html">Trânsferência</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="saldo.html">Consulta de Saldo atual</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="extrato.html">Consulta de extrato</a>
+            </li>
+          </ul>
+        </div>
+        <div class="form-inline">
+          <a href="../index.html" class="btn btn-sm btn-outline-danger text-white my-2 my-sm-0">
+            <i class="fas fa-door-open"></i>
+            Sair
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Corpo da página -->
+    <main class="container">
+      <h2 class="mb-4">
+        EXTRATO
+      </h2>
+
+      <div class="well container col-12" *ngIf="!isLoading">
+        <form #formExtrato="ngForm">
+          <div class="form-group">
+            <label for="dataInicio">Data Inicial</label>
+            <input type="date" class="form-control" id="dataInicio" name="dataInicio"  required>
+          </div>
+          <div class="form-group">
+            <label for="dataFim">Data Final</label>
+            <input type="date" class="form-control" id="dataFim" name="dataFim" required>
+          </div>
+          <button type="button" class="btn btn-primary" (click)="consultarExtrato()"
+            [disabled]="!formExtrato.form.valid || dataInvalida">
+            <i class="fa fa-file-invoice-dollar" aria-hidden="true"></i> Consultar Extrato
+          </button>
+        </form>
+        
+      <!-- Tabela com atendimentos em aberto -->
+      <div class="mt-5">
+
+            <table class="table table-hover">
+              <thead class="c-thead">
+                <tr class="text-center">
+                  <th scope="col">Data/Hora da Transação</th>
+                  <th scope="col">Operação</th>
+                  <th scope="col">Valor</th>
+                  <th scope="col">Cliente de Origem</th>
+                  <th scope="col">Cliente de Destino</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="c-clickable text-center" data-href="atendimentos-form.html">
+                  <th scope="row">10-set-2022 12:35</th>
+                  <td>Transferência</td>
+                  <td><span class="badge badge-sm badge-danger c-status">R$ 350,00 </span></td>
+                  <td>Carlos Henrique</td>
+                  <td>José Maria</td>    
+                </tr>
+                <tr class="c-clickable text-center" data-href="atendimentos-form.html">
+                  <th scope="row">22-out-2022 15:21</th>
+                  <td>Deposito</td>
+                  <td><span class="badge badge-sm badge-info c-status">R$ 1240,00 </span></td>
+                  <td>  </td>
+                  <td>  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </main>
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>
