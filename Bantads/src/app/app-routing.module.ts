@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { IndexComponent } from './cliente/index/index.component';
+import { HomePrincipalComponent } from './cliente/home-principal/home-principal.component';
 import { ClienteDadosComponent } from './cliente/cliente-dados/cliente-dados.component';
 
 const routes: Routes = [
     { path: '', 
-      redirectTo: 'clientes/index', 
+      redirectTo: 'clientes/home-principal', 
       pathMatch: 'full' },
     { path: 'clientes', 
-      redirectTo: 'clientes/index' },
-    { path: 'clientes/index', 
-      component:  IndexComponent },
+      redirectTo: 'clientes/home-principal' },
+    { path: 'clientes/home-principal', 
+      component:  HomePrincipalComponent },
     { path: 'clientes/cliente-editar', 
       component: ClienteDadosComponent }
-      
 ];
 
     @NgModule({

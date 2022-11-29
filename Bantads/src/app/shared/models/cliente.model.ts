@@ -8,6 +8,8 @@ export class Cliente {
         public cpf: number,
         public telefone: number,
         public salario: number,
-        public endereco: Endereco){
+        public endereco: Endereco,
+        public senha: string
+        ){
     }
 }
