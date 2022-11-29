@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Cliente } from 'src/app/shared/models/cliente.model';
+import { Endereco } from 'src/app/shared/models/endereco.model';
 import { ClienteService } from '../services/cliente.service';
 
 @Component({
@@ -19,7 +20,8 @@ export class HomePrincipalComponent implements OnInit {
 
   ngOnInit(): void {
     // Cria uma instância vazia, para não dar erro de referência
-    this.cliente = new Cliente();
+
+    this.cliente = new Cliente(new Endereco());
   }
   // Para inserir:
   // - Verifica se o formulário é válido, se não deu nenhum erro
