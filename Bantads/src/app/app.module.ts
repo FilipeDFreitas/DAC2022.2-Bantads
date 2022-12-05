@@ -8,6 +8,8 @@ import { ClienteModule } from './cliente/cliente.module';
 import { GerenteModule } from './gerente/gerente.module';
 import { AdministradorModule } from './administrador/administrador.module';
 
+
+
 @NgModule({
   declarations: [
     AppComponent
