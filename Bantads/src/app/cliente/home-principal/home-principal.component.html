@@ -224,14 +224,7 @@
                   </span>
                 </div>
                 <input type="password" class="form-control" name="senha" placeholder="Senha de acesso" 
-                    [(ngModel)]="cliente.senha"
-                    #senha="ngModel"/>
-                
-                <div *ngIf="senha.errors && (senha.dirty || senha.touched)" class="alert alert-danger">
-                  <div [hidden]="!senha.errors?.['required']"> 
-                      Digite a senha do cliente. 
-                  </div>
-                </div>
+                 />
               </div>
 
             </div>

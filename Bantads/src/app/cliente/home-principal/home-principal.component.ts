@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Cliente } from 'src/app/shared/models/cliente.model';
 import { Endereco } from 'src/app/shared/models/endereco.model';
 import { ClienteService } from '../services/cliente.service';
+import { LoginComponent } from 'src/app/auth/login/login.component';
 
 @Component({
   selector: 'app-home-principal',
@@ -34,4 +35,9 @@ export class HomePrincipalComponent implements OnInit {
       this.router.navigate( ["/clientes"] );
     }
   }
+  
+
+
+
+
 }

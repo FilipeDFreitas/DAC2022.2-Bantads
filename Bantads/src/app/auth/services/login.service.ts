@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Login } from 'src/app/shared/models/login.model';
-import { Usuario } from 'src/app/shared/models/usuario.model';
+import { Login, Usuario } from 'src/app/shared';
+
 
 const LS_CHAVE: string = "usuarioLogado";
 
@@ -25,15 +25,15 @@ export class LoginService {
   }
   login(login: Login): Observable<Usuario | null> {
     let usu = new Usuario(1, "Teste-Cliente", 
-      login.login, login.senha, "CLIENTE");
-    if (login.login == login.senha) {
-      if (login.login == "admin") {
+      login.email, login.senha, "CLIENTE");
+    if (login.email == login.senha) {
+      if (login.email == "admin") {
         usu = new Usuario(1, "Teste-Admin", 
-        login.login, login.senha, "ADMIN");
+        login.email, login.senha, "ADMIN");
       }
-      else if (login.login == "gerente") {
-        usu = new Usuario(1, "Razerteste-Gerente", 
-         login.login, login.senha, "GERENTE");
+      else if (login.email == "gerente") {
+        usu = new Usuario(1, "Teste-Gerente", 
+         login.email, login.senha, "GERENTE");
       }
       return of(usu);
     }

@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute) { 
       if (this.loginService.usuarioLogado) {
-        this.router.navigate( ["/home"] );
+        this.router.navigate( ["/clientes"] );
       } 
     }
 
@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
         if (usu != null) {
           this.loginService.usuarioLogado = usu;
           this.loading = false;
-          this.router.navigate( ["/home"] ); 
+          this.router.navigate( ["/clientes"] ); 
         }
         else {
           this.message = "Usuário/Senha inválidos.";
@@ -73,5 +73,6 @@ export class LoginComponent implements OnInit {
       this.router.navigate( ["/home"] );
     }
   }
+
 
 }
