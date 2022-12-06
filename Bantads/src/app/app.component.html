@@ -1,8 +1,10 @@
 
     <!-- Cabeçalho da página -->
     <header class="container-fluid bg-dark mb-5">
+    
       <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
-        <li *ngIf="usuarioLogado.perfil=='CLIENTE'" class="nav-item">
+        <div *ngIf="usuarioLogado">
+        <li *ngIf="usuarioLogado.perfil==='CLIENTE'" class="nav-item">
             <a class="navbar-brand" href="#" routerLink="/clientes">
             <img src="../assets/simboloBancoInvertido.jpg" width="33" height="33" class="d-inline-block align-top" alt="Logo do sistema" />
             <span class="text-white-50 h4 c-title">BANTADS</span>
@@ -33,6 +35,7 @@
                 </ul>
             </div>
         </li>
+        </div>
         <div *ngIf="usuarioLogado" class="form-inline">
           <a class="btn btn-sm btn-outline-danger text-white my-2 my-sm-0"
             href="#" (click)="logout()">
@@ -41,6 +44,6 @@
           </a>
         </div>
       </nav>
+      <router-outlet></router-outlet>
     </header>
 
-<router-outlet></router-outlet>

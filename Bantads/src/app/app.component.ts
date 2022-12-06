@@ -14,7 +14,7 @@ export class AppComponent {
     private router: Router,
     private loginService: LoginService
     ) { }
-    get usuarioLogado(): Usuario {
+    get usuarioLogado(): Usuario | null {
       return this.loginService.usuarioLogado;
     }
     logout() {
