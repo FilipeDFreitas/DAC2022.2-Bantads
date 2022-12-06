@@ -7,6 +7,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { ClienteModule } from './cliente/cliente.module';
 import { GerenteModule } from './gerente/gerente.module';
 import { AdministradorModule } from './administrador/administrador.module';
+import { AuthModule } from './auth/auth.module';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { AdministradorModule } from './administrador/administrador.module';
     AppRoutingModule,
     ClienteModule,
     GerenteModule,
-    AdministradorModule
+    AdministradorModule,
+    AuthModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

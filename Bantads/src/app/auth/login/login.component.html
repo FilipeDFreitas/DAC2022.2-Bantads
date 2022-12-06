@@ -1,0 +1,302 @@
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      BANTADS :: [Trabalho DAC (parte 1)]
+    </title>
+  </head>
+  <body>
+
+    <!-- Corpo da página Principal -->
+    <main class="container mb-5">
+      <div class="text-center">
+        <h1 class="text-primary display-3 c-title">
+          <img src="assets/simboloBanco.jpg" class="c-logo-large" width="150" height="150" alt="Logo do Sistema" />
+          BANTADS
+        </h1>
+        <span class="text-secondary c-subtitle">
+          Internet Banking do <strong>TADS</strong><sup>&copy;</sup>
+        </span>
+      </div>
+
+      <!-- Alertas -->
+      <div *ngIf="message" class="alert alert-danger
+        alert-dismissible fade show" role="alert">
+          {{message}}
+        <a href="#" class="close" data-dismiss="alert" 
+          aria-label="close"> &times;</a>
+        <button type="button" class="close" data-dismiss="alert" 
+          aria-label="Close" (click)="$event.preventDefault()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+     
+      
+      <div class="row my-3">
+        <div class="col-6 p-3 d-flex align-items-stretch">
+
+          <!-- Formulário de login -->
+          <form #formLogin="ngForm">
+            <h2 class="card-header">Entrar</h2>
+            <img class="card-img-top" src="assets/dinheiros.jpg" alt="Capa">
+            <div class="card-body">
+              <a class="card-text mt-1">
+                Acesse a sua conta <strong>BANTADS</strong>.
+              </a>
+              <p class="card-text mb-5">
+                Realize o login com as suas credenciais:
+              </p>
+                <div class="form-group">
+                  <label for="email">E-mail:</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="fas fa-at"></i>
+                      </span>
+                    </div>
+                    <input type="email" id="email" class="form-control" name="email"
+                      [(ngModel)]="login.email" #usuario="ngModel" required>
+                      <div *ngIf="usuario.errors && (usuario.dirty || usuario.touched)"
+                      class="alert alert-danger">
+                        <div [hidden]="!usuario.errors?.['required']"> 
+                          Digite o usuário
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label for="senha">Senha:</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">
+                        <i class="fas fa-unlock-alt"></i>
+                      </span>
+                    </div>
+                    <input type="password" id="senha" class="form-control" name="senha" 
+                    [(ngModel)]="login.senha" #senha="ngModel" required>
+                    <div *ngIf="senha.errors && (senha.dirty || senha.touched)"
+                      class="alert alert-danger">
+                      <div [hidden]="!senha.errors?.['required']"> 
+                        Digite a senha.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <p class="mt-4 mb-0 h5">
+                    Esqueceu a senha? <a href="mailto:example@email.com">Contate nosso suporte</a>
+                  </p>
+                </div>
+              </div>
+              <div class="card-footer text-center">
+                <button type="submit" class="btn btn-lg btn-primary w-50"
+                  (click)="logar()"
+                  [disabled]="!formLogin.form.valid">
+                  <i class="fa fa-save" aria-hidden="true"></i>
+                  Entrar
+                </button>
+              </div>
+          </form>
+        </div>
+
+        <!-- Formulário de cadastro -->
+        <div class="col-6 p-3 d-flex align-items-stretch">
+          <form #formCliente="ngForm" id="form-signup" action="#" method="POST" class="card">
+            <h2 class="card-header">Abra sua conta no BANTADS</h2>
+            <div class="card-body">
+              <p class="card-text">Cadastre-se:</p>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fab fa-slack-hash"></i>
+                  </span>
+                </div>
+
+                <input type="number" class="form-control" name="cpf" placeholder="CPF" step="1"
+                    [(ngModel)]="cliente.cpf"
+                    #cpf="ngModel"
+                    minlength="11" required/>
+                
+                <div *ngIf="cpf.errors && (cpf.dirty || cpf.touched)" class="alert alert-danger">
+
+                <div [hidden]="!cpf.errors?.['required']"> 
+                    Digite o cpf do cliente. 
+                </div>
+                <div [hidden]="!cpf.errors?.['minlength']"> 
+                    O cpf deve conter 11 digitos. 
+                </div>
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-user"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" name="nome" placeholder="Nome completo" 
+                    [(ngModel)]="cliente.nome"
+                    #nome="ngModel" required/>
+                
+                <div *ngIf="nome.errors && (nome.dirty || nome.touched)" class="alert alert-danger">
+
+                    <div [hidden]="!nome.errors?.['required']"> 
+                        Digite o nome completo do cliente. 
+                    </div>
+                </div>
+                </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-at"></i>
+                  </span>
+                </div>
+                <input type="email" class="form-control" name="email" placeholder="E-mail de acesso" 
+                    [(ngModel)]="cliente.email"
+                    #email="ngModel" required/>
+                
+                <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
+
+                    <div [hidden]="!email.errors?.['required']"> 
+                        Digite o email do cliente. 
+                    </div>
+                </div>
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-mobile-alt"></i>
+                  </span>
+                </div>
+                <input type="number" class="form-control" name="telefone" placeholder="Telefone (com DDD)" 
+                    [(ngModel)]="cliente.telefone"
+                    #telefone="ngModel"/>
+                
+                <div *ngIf="telefone.errors && (telefone.dirty || telefone.touched)" class="alert alert-danger">
+
+                <div [hidden]="!telefone.errors?.['required']"> 
+                    Digite o telefone do cliente. 
+                </div>
+              </div>
+            </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-money-bill"></i>
+                  </span>
+                </div>
+                <input type="number" class="form-control" name="salario" placeholder="Salário" 
+                    [(ngModel)]="cliente.salario"
+                    #salario="ngModel"/>
+                
+                <div *ngIf="salario.errors && (salario.dirty || salario.touched)" class="alert alert-danger">
+
+                <div [hidden]="!salario.errors?.['required']"> 
+                    Digite o salario do cliente. 
+                </div>
+              </div>
+            </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </span>
+                </div>
+                <input type="number" class="form-control" name="cep" placeholder="CEP" 
+                [(ngModel)]="cliente.endereco.cep"
+                    #cpf="ngModel"
+                    minlength="9"/>
+            
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" type="button" id="buscar-cep">
+                    Buscar CEP
+                  </button>
+                </div>
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-map"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" name="rua" placeholder="Endereço (rua, avenida, alameda...)" disabled />
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-map-marked-alt"></i>
+                  </span>
+                </div>
+                <input type="number" class="form-control" name="numero" placeholder="Número" />
+                <input type="text" class="form-control" name="complemento" placeholder="Complemento" />
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-globe-americas"></i>
+                  </span>
+                </div>
+                <input type="text" class="form-control" name="cidade" placeholder="Cidade" disabled />
+                <input type="text" class="form-control" name="estado" placeholder="Estado" disabled />
+              </div>
+
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-unlock-alt"></i>
+                  </span>
+                </div>
+                <input type="password" class="form-control" name="senha" placeholder="Senha de acesso" 
+                    [(ngModel)]="login.senha"
+                    #senha="ngModel"/>
+                
+                <div *ngIf="senha.errors && (senha.dirty || senha.touched)" class="alert alert-danger">
+                  <div [hidden]="!senha.errors?.['required']"> 
+                      Digite a senha do cliente. 
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="card-footer text-center">
+              <button type="click" class="btn btn-lg btn-primary w-50">
+                Criar Conta
+              </button>
+            </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Acessar protótipo como...</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="list-group text-center w-100">
+              <a href="cliente/index.html" class="text-primary list-group-item list-group-item-action list-group-item-light">Cliente</a>
+              <a href="administrador/index.html" class="text-primary list-group-item list-group-item-action list-group-item-light">Administrador</a>
+              <a href="gerente/index.html" class="text-primary list-group-item list-group-item-action list-group-item-light">Gerente</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
