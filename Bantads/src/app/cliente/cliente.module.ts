@@ -9,7 +9,6 @@ import { SaldoComponent } from './saldo/saldo.component';
 import { SaqueComponent } from './saque/saque.component';
 import { TransferenciaComponent } from './transferencia/transferencia.component';
 import { HomeComponent } from './home/home.component';
-import { HomePrincipalComponent } from './home-principal/home-principal.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
@@ -22,8 +21,7 @@ import { FormsModule } from '@angular/forms';
     SaldoComponent,
     SaqueComponent,
     TransferenciaComponent,
-    HomeComponent,
-    HomePrincipalComponent
+    HomeComponent
   ],
   imports: [
     CommonModule,
