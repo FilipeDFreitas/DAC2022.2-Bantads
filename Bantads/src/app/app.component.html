@@ -1,7 +1,6 @@
 
     <!-- Cabeçalho da página -->
-    <header class="container-fluid bg-dark mb-5">
-    
+    <header class="container-fluid bg-dark mb-5">   
       <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
         <div *ngIf="usuarioLogado">
         <li *ngIf="usuarioLogado.perfil==='CLIENTE'" class="nav-item">
@@ -44,6 +43,6 @@
           </a>
         </div>
       </nav>
-      <router-outlet></router-outlet>
     </header>
+    <router-outlet></router-outlet>
 
