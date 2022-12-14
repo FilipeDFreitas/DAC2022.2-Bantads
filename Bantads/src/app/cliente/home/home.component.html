@@ -1,103 +1,104 @@
-  <html lang="pt-BR">
-  
-  <body>
+<html lang="pt-BR">
 
-    <!-- Corpo da página -->
-    <main class="container">
-      <h2 class="mb-4">
-        Bem-vindo(a), <strong>[nome do cliente]</strong>
-      </h2>
-      <div class="row">
-        <div class="form-group">
-          <label for="cliente-telefone">Saldo Atual:</label>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">
-                <i class="fas fa-money-bill"></i>
-              </span>
-            </div>
-            <input type="number" class="form-control" name="salario" placeholder="Salário" />
+<body>
+
+  <!-- Corpo da página -->
+  <main class="container">
+    <h2 class="mb-4">
+      Bem-vindo(a), <strong>{{cliente.nome}}</strong>
+    </h2>
+    <div class="row">
+      <div class="form-group">
+        <label for="cliente-telefone">Saldo Atual:</label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">
+              <i class="fas fa-money-bill"></i>
+            </span>
+          </div>
+          <input type="number" class="form-control" name="saldo" placeholder={{cliente.salario}} />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="card-deck" style="width: 180rem;">
+        <div class="card border border-primary text-primary">
+          <div class="card-body text-center">
+            <p class="card-text display-4">
+              <strong>
+                <i class="fas fa-user"></i>
+              </strong>
+            </p>
+            <p class="card-text h8">
+              Alterar<br> perfil
+            </p>
+            <a  href="#" routerLink="/clientes/cliente-editar" class="stretched-link h-0"></a>
+          </div>
+        </div>
+
+        <div class="card border border-primary text-primary">
+          <div class="card-body text-center">
+            <p class="card-text display-4">
+              <i class="fas fa-download"></i>
+            </p>
+            <p class="card-text h7">
+              Depositar
+            </p>
+            <a href="#" routerLink="/clientes/depositar" class="stretched-link h-0"></a>
+          </div>
+        </div>
+
+        <div class="card border border-primary text-primary">
+          <div class="card-body text-center">
+            <p class="card-text display-4">
+              <i class="fas fa-money-bill"></i>
+            </p>
+            <p class="card-text h8">
+              Saque
+            </p>
+            <a href="#" routerLink="/clientes/saque" class="stretched-link h-0"></a>
+          </div>
+        </div>
+        <div class="card border border-primary text-primary">
+          <div class="card-body text-center">
+            <p class="card-text display-4">
+              <i class="fas fa-share"></i>
+            </p>
+            <p class="card-text h8">
+              Transferência
+            </p>
+            <a href="#" routerLink="/clientes/transferir" class="stretched-link h-0"></a>
+          </div>
+        </div>
+
+        <div class="card border border-primary text-primary">
+          <div class="card-body text-center">
+            <p class="card-text display-4">
+              <i class="fas fa-dollar-sign"></i>
+            </p>
+            <p class="card-text h8">
+              Saldo
+            </p>
+            <a href="#" routerLink="/clientes/saldo" class="stretched-link h-0"></a>
+          </div>
+        </div>
+
+        <div class="card border border-primary text-primary">
+          <div class="card-body text-center">
+            <p class="card-text display-4">
+              <i class="fa fa-list-alt"></i>
+            </p>
+            <p class="card-text h8">
+              Extrato
+            </p>
+            <a href="#" routerLink="/clientes/extrato" class="stretched-link h-0"></a>
           </div>
         </div>
       </div>
+    </div>
+    <div></div>
+  </main>
+</body>
 
-      <div class="row">
-        <div class="card-deck" style="width: 180rem;">
-          <div class="card border border-primary text-primary">
-            <div class="card-body text-center">
-              <p class="card-text display-4">
-                <strong>
-                    <i class="fas fa-user"></i>
-                </strong>
-              </p>
-              <p class="card-text h8">
-                Alterar<br> perfil
-              </p>
-              <a href="cliente-dados.html" class="stretched-link h-0"></a>
-            </div>
-          </div>
-
-          <div class="card border border-primary text-primary">
-            <div class="card-body text-center">
-              <p class="card-text display-4">
-                <i class="fas fa-download"></i>
-              </p>
-              <p class="card-text h7">
-                Depositar
-              </p>
-              <a href="depositatar.html" class="stretched-link h-0"></a>
-            </div>
-          </div>
-
-          <div class="card border border-primary text-primary">
-            <div class="card-body text-center">
-              <p class="card-text display-4">
-                <i class="fas fa-money-bill"></i>
-              </p>
-              <p class="card-text h8">
-                Saque
-              </p>
-              <a href="saque.html" class="stretched-link h-0"></a>
-            </div>
-          </div>
-          <div class="card border border-primary text-primary">
-            <div class="card-body text-center">
-              <p class="card-text display-4">
-                <i class="fas fa-share"></i>
-              </p>
-              <p class="card-text h8">
-                Transferência
-              </p>
-              <a href="transferencia.html" class="stretched-link h-0"></a>
-            </div>
-          </div>
-
-          <div class="card border border-primary text-primary">
-            <div class="card-body text-center">
-              <p class="card-text display-4">
-                <i class="fas fa-dollar-sign"></i>
-              </p>
-              <p class="card-text h8">
-                Saldo
-              </p>
-              <a href="saldo.html" class="stretched-link h-0"></a>
-            </div>
-          </div>
-
-          <div class="card border border-primary text-primary">
-            <div class="card-body text-center">
-              <p class="card-text display-4">
-                <i class="fa fa-list-alt"></i>
-              </p>
-              <p class="card-text h8">
-                Extrato
-              </p>
-              <a href="extrato.html" class="stretched-link h-0"></a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div></div>
-    </main>
-  </body>
 </html>

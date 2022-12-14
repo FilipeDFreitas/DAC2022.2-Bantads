@@ -3,7 +3,7 @@ import { Conta } from "./conta.model";
 
 export class Cliente {
     constructor(
-        public endereco: Endereco,
+        public endereco?: Endereco,
         public id?: number,
         public nome?: string,
         public email?: string,

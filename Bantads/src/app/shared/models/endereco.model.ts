@@ -1,5 +1,6 @@
 export class Endereco {
     constructor(
+        public id?: number,
         public logradouro?: string,
         public numero?: number,
         public cep?: number,

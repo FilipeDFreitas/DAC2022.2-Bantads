@@ -103,6 +103,7 @@
         </div>
 
         <!-- Formulário de cadastro -->
+        
         <div class="col-6 p-3 d-flex align-items-stretch">
           <form #formCliente="ngForm" id="form-signup" action="#" method="POST" class="card">
             <h2 class="card-header">Abra sua conta no BANTADS</h2>
@@ -208,8 +209,9 @@
                     <i class="fas fa-map-marker-alt"></i>
                   </span>
                 </div>
+                <!--Antes tava cliente.endereco.cep-->
                 <input type="number" class="form-control" name="cep" placeholder="CEP" 
-                [(ngModel)]="cliente.endereco.cep"
+                [(ngModel)]="cliente.endereco"  
                     #cpf="ngModel"
                     minlength="9"/>
             
@@ -277,26 +279,5 @@
         </div>
       </div>
     </main>
-
-    <!-- Modal -->
-    <div class="modal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Acessar protótipo como...</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="list-group text-center w-100">
-              <a href="cliente/index.html" class="text-primary list-group-item list-group-item-action list-group-item-light">Cliente</a>
-              <a href="administrador/index.html" class="text-primary list-group-item list-group-item-action list-group-item-light">Administrador</a>
-              <a href="gerente/index.html" class="text-primary list-group-item list-group-item-action list-group-item-light">Gerente</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </body>
 </html>
