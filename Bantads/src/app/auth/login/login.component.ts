@@ -36,7 +36,10 @@ export class LoginComponent implements OnInit {
     this.message = params['error'];
     });
     // Cadastro - Cria uma instância vazia, para não dar erro de referência
+    // com o prof, antes de fazer o json db > 
     this.cliente = new Cliente(new Endereco());
+
+
   }
 
   logar(): void {

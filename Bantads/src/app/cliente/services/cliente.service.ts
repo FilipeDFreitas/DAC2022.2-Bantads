@@ -1,52 +1,45 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Cliente } from 'src/app/shared/models/cliente.model';
+import { Cliente } from 'src/app/shared';
+import { Observable } from 'rxjs';
 
-const LS_CHAVE:  string =  "clientes";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClienteService {
+  BASE_URL = "http://localhost:3000/clientes/";
 
-  constructor() { }
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  };
 
-  listarTodos(): Cliente[]{
-    const clientes = localStorage[LS_CHAVE];
-    //PRECISA DO CONDICIONAL POIS RETORNA UNDEFINED SE A CHAVE NAO EXISTE
-    return clientes ? JSON.parse(clientes) : [];
+  constructor(private httpClient: HttpClient) { }
+
+  listarTodos(): Observable<Cliente[]> {
+    return this.httpClient.get<Cliente[]>(this.BASE_URL,
+      this.httpOptions);
   }
 
-  inserir(cliente: Cliente):void{
-    const clientes = this.listarTodos();
-
-    cliente.id= new Date().getTime();
-
-    clientes.push(cliente);
-
-    localStorage[LS_CHAVE] = JSON.stringify(clientes);
+  buscarPorId(id: number): Observable<Cliente> {
+    return this.httpClient.get<Cliente>(this.BASE_URL + id,
+      this.httpOptions);
   }
-
-  buscarPorId(id:number): Cliente | undefined {
-    const clientes: Cliente[] = this.listarTodos();
-
-    return clientes.find(cliente => cliente.id == id);
+  inserir(cliente: Cliente): Observable<Cliente> {
+    return this.httpClient.post<Cliente>(this.BASE_URL,
+      JSON.stringify(cliente),
+      this.httpOptions);
   }
-
-  atualizar(cliente: Cliente): void{
-    const clientes:Cliente[] = this.listarTodos();
-
-    clientes.forEach((obj, index, objs) => {
-      if(cliente.id == obj.id){
-        objs[index] = cliente
-      }
-    });
-    localStorage[LS_CHAVE] = JSON.stringify(clientes);
+  remover(id: number): Observable<Cliente> {
+    return this.httpClient.delete<Cliente>(this.BASE_URL + id,
+      this.httpOptions);
   }
-
-  remover(id:number): void{
-    let clientes: Cliente[] = this.listarTodos();
-    clientes = clientes.filter(cliente => cliente.id !== id);
-    localStorage[LS_CHAVE] = JSON.stringify(clientes);
+  alterar(cliente: Cliente): Observable<Cliente> {
+    return this.httpClient.put<Cliente>(this.BASE_URL + cliente.id,
+      JSON.stringify(cliente),
+      this.httpOptions);
   }
 
 }

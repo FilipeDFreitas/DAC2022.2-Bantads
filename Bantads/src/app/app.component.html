@@ -3,6 +3,7 @@
     <header class="container-fluid bg-dark mb-5">   
       <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
         <div *ngIf="usuarioLogado">
+        <!-- Menu do cliente -->
         <li *ngIf="usuarioLogado.perfil==='CLIENTE'" class="nav-item">
             <a class="navbar-brand" href="#" routerLink="/clientes">
             <img src="../assets/simboloBancoInvertido.jpg" width="33" height="33" class="d-inline-block align-top" alt="Logo do sistema" />
@@ -34,6 +35,9 @@
                 </ul>
             </div>
         </li>
+        <!-- Menu do administrador -->
+
+        <!-- Menu do gerente -->
         </div>
         <div *ngIf="usuarioLogado" class="form-inline">
           <a class="btn btn-sm btn-outline-danger text-white my-2 my-sm-0"
