@@ -14,31 +14,31 @@ import { LoginService } from '../services/login.service';
 
 
 export class LoginComponent implements OnInit {
-  @ViewChild('formLogin') formLogin! : NgForm;
+  @ViewChild('formLogin') formLogin!: NgForm;
   login: Login = new Login();
   loading: boolean = false;
   message!: string;
-  
+
   constructor(
-    private loginService: LoginService, 
+    private loginService: LoginService,
     private clienteService: ClienteService, // parte do cadastro
     private router: Router,
-    private route: ActivatedRoute) { 
-      if (this.loginService.usuarioLogado) {
-        this.router.navigate( ["/clientes"] );
-      } 
+    private route: ActivatedRoute) {
+    if (this.loginService.usuarioLogado) {
+      this.router.navigate(["/clientes"]);
     }
+  }
 
 
   ngOnInit(): void {
     this.route.queryParams
-    .subscribe(params => {
-    this.message = params['error'];
-    });
+      .subscribe(params => {
+        this.message = params['error'];
+      });
     // Cadastro - Cria uma instância vazia, para não dar erro de referência
+
     // com o prof, antes de fazer o json db > 
     this.cliente = new Cliente(new Endereco());
-
 
   }
 
@@ -49,7 +49,15 @@ export class LoginComponent implements OnInit {
         if (usu != null) {
           this.loginService.usuarioLogado = usu;
           this.loading = false;
-          this.router.navigate( ["/clientes"] ); 
+          if (usu.perfil == "ADMIN") {
+            //ajustar rota administrador
+            this.router.navigate([""]);
+          } else if (usu.perfil == "GERENTE") {
+            //ajustar rota gerente
+            this.router.navigate([""])
+          } else {
+            this.router.navigate(["/clientes"]);
+          }
         }
         else {
           this.message = "Usuário/Senha inválidos.";
@@ -60,11 +68,11 @@ export class LoginComponent implements OnInit {
   }
 
   //parte do cadastro
-  @ViewChild('formCliente') formCliente! : NgForm;
-  cliente! : Cliente;
+  @ViewChild('formCliente') formCliente!: NgForm;
+  cliente!: Cliente;
 
-   //--------- Cadastrooooooo
-   //OBS:: no html em senha eu coloquei login.senha em vez de cliente.senha>>verificar o correto
+  //--------- Cadastrooooooo
+  //OBS:: no html em senha eu coloquei login.senha em vez de cliente.senha>>verificar o correto
   // Para inserir:
   // - Verifica se o formulário é válido, se não deu nenhum erro
   // - Se OK
@@ -73,7 +81,7 @@ export class LoginComponent implements OnInit {
   inserir(): void {
     if (this.formCliente.form.valid) {
       this.clienteService.inserir(this.cliente);
-      this.router.navigate( ["/home"] );
+      this.router.navigate(["/home"]);
     }
   }
 
