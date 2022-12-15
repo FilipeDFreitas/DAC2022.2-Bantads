@@ -23,11 +23,8 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService,
     private clienteService: ClienteService, // parte do cadastro
     private router: Router,
-    private route: ActivatedRoute) {
-    if (this.loginService.usuarioLogado) {
-      this.router.navigate(["/clientes"]);
-    }
-  }
+    private route: ActivatedRoute) {}
+  
 
 
   ngOnInit(): void {
@@ -55,8 +52,8 @@ export class LoginComponent implements OnInit {
           } else if (usu.perfil == "GERENTE") {
             //ajustar rota gerente
             this.router.navigate([""])
-          } else {
-            this.router.navigate(["/clientes"]);
+          } else if (usu.perfil == "CLIENTE") {
+            this.router.navigate(['/clientes']);
           }
         }
         else {

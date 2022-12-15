@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cliente } from 'src/app/shared';
 import { ClienteService } from '../services/cliente.service';
-import { RouterLink, Router, Route } from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,13 +14,16 @@ export class HomeComponent implements OnInit {
   loading!: boolean;
   id!: string;
   constructor(
+    private route: ActivatedRoute,
     private router: Router,
     private clienteService: ClienteService) { }
 
   ngOnInit(): void {
     this.cliente = new Cliente();
     this.loading = false;
-    this.clienteService.buscarPorId(+this.id).subscribe(cliente => { this.cliente = cliente; });
+    this.id = this.route.snapshot.params['id'];
+    this.clienteService.buscarPorId(+this.id).subscribe(cliente => 
+      { this.cliente = cliente;});
   }
 
 }

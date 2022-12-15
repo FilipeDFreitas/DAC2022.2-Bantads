@@ -9,6 +9,7 @@ export class Conta {
         public limite?: number,
         public idGerente?: Gerente,
         public motivoReprovacao?: string,
-        public dataAprovOuReprov?: Date){
+        public dataAprovOuReprov?: Date,
+        public saldo?: number){
     }
 }
