@@ -18,13 +18,18 @@ export class LoginComponent implements OnInit {
   login: Login = new Login();
   loading: boolean = false;
   message!: string;
+  public endereco = new Endereco();
+  public estados: string[] = [
+    "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA",
+    "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"
+  ];
 
   constructor(
     private loginService: LoginService,
     private clienteService: ClienteService, // parte do cadastro
     private router: Router,
     private route: ActivatedRoute) {}
-  
+
 
 
   ngOnInit(): void {
@@ -34,7 +39,7 @@ export class LoginComponent implements OnInit {
       });
     // Cadastro - Cria uma instância vazia, para não dar erro de referência
 
-    // com o prof, antes de fazer o json db > 
+    // com o prof, antes de fazer o json db >
     this.cliente = new Cliente(new Endereco());
 
   }
@@ -75,10 +80,11 @@ export class LoginComponent implements OnInit {
   // - Se OK
   // . Chama o inserir do Service, this.pessoa está preenchida (binding)
   // . Redireciona para /pessoas
-  inserir(): void {
+  cadastrarCliente(): void {
     if (this.formCliente.form.valid) {
-      this.clienteService.inserir(this.cliente);
-      this.router.navigate(["/home"]);
+      this.cliente.endereco = this.endereco;
+      this.clienteService.inserir(this.cliente)
+      this.router.navigate(['/login']);
     }
   }
 
