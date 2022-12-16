@@ -21,7 +21,6 @@
       "perfil": "CLIENTE"
     }
   ],
-
   "clientes": [
     {
       "id": 1,
@@ -32,10 +31,57 @@
       "salario": 4000.5,
       "status": true,
       "conta": 1,
-      "endereco_id": 1 
+      "endereco_id": 1
+    },
+    {
+      "endereco": {
+        "logradouro": "rua aaa",
+        "numero": 111,
+        "cep": "82820000",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "xx"
+      },
+      "nome": "aaa",
+      "email": "aa@aaa",
+      "cpf": 11111111111,
+      "telefone": 41999999999,
+      "salario": 5000,
+      "id": 2
+    },
+    {
+      "endereco": {
+        "logradouro": "Rua Marcilio Dias",
+        "numero": 315,
+        "cep": "82820000",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "xx"
+      },
+      "nome": "bbb",
+      "email": "bb@aaa",
+      "cpf": 22222222222,
+      "telefone": 41999999999,
+      "salario": 1000,
+      "id": 3
+    },
+    {
+      "endereco": {
+        "logradouro": "rua xxx",
+        "numero": 111,
+        "cep": "33333333",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "xx"
+      },
+      "nome": "ccc",
+      "email": "ccc@cc",
+      "cpf": 55555555555,
+      "telefone": 41888888888,
+      "salario": 6000,
+      "id": 4
     }
   ],
-
   "enderecos": [
     {
       "id": 1,

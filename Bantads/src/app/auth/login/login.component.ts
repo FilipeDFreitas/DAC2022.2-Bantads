@@ -18,6 +18,8 @@ export class LoginComponent implements OnInit {
   login: Login = new Login();
   loading: boolean = false;
   message!: string;
+
+  //cadastro
   public endereco = new Endereco();
   public estados: string[] = [
     "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA",
@@ -83,10 +85,12 @@ export class LoginComponent implements OnInit {
   cadastrarCliente(): void {
     if (this.formCliente.form.valid) {
       this.cliente.endereco = this.endereco;
-      this.clienteService.inserir(this.cliente)
-      this.router.navigate(['/login']);
+
+      this.clienteService.inserir(this.cliente).subscribe(cliente => {this.loading = false;
+      this.router.navigate([''])
+    });
+    this.formCliente.reset();
     }
+
   }
-
-
 }
