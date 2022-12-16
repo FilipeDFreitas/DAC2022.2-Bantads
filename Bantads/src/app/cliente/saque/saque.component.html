@@ -1,0 +1,56 @@
+<!-- Corpo da página -->
+<main class="container">
+    <h2 class="mb-4">
+      DADOS PARA SAQUE
+    </h2>
+
+    <!-- Formulário dos dados do usuário -->
+    <form action="#" method="POST" class="mt-5">
+      <div class="row">
+        <div class="col-12 jsutify-content-between">
+          <button type="submit" class="btn btn-primary float-right w-25">
+            <i class="far fa-save"></i>
+            Sacar
+          </button>
+          <h3 class="mb-3 h4">Saque</h3>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <label for="cliente-nome">Número da conta:</label>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-user"></i>
+                </span>
+              </div>
+              <input type="text" id="numeroConta" class="form-control" value="000-00" />
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="data-saque">Data do saque:</label>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="far fa-calendar-alt"></i>
+                </span>
+              </div>
+              <input type="date" id="data-saque" class="form-control" name="data_sque" value="07-11-2022" />
+            </div>
+          </div>
+            <div class="form-group">
+              <label for="vSaque">Valor do Saque:</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    <i class="fas fa-money-bill"></i>
+                  </span>
+                </div>
+                <input type="number" class="form-control" name="vSaque" placeholder="R$ 0000,00" />
+              </div>
+            </div>
+          </div>
+        </div>
+    </form>
+  </main>
+

@@ -1,0 +1,55 @@
+<!-- retirado alguns itens que precisam estar no ts pra estar aqui -->
+<main class="container">
+    <h2 class="mb-4">
+      EXTRATO
+    </h2>
+
+    <div class="well container col-12">
+      <form #formExtrato="ngForm">
+        <div class="form-group">
+          <label for="dataInicio">Data Inicial</label>
+          <input type="date" class="form-control" id="dataInicio" name="dataInicio"  required>
+        </div>
+        <div class="form-group">
+          <label for="dataFim">Data Final</label>
+          <input type="date" class="form-control" id="dataFim" name="dataFim" required>
+        </div>
+        <button type="button" class="btn btn-primary" 
+          [disabled]="!formExtrato.form.valid">
+          <i class="fa fa-file-invoice-dollar" aria-hidden="true"></i> Consultar Extrato
+        </button>
+      </form>
+      
+    <!-- Tabela com atendimentos em aberto -->
+    <div class="mt-5">
+
+          <table class="table table-hover">
+            <thead class="c-thead">
+              <tr class="text-center">
+                <th scope="col">Data/Hora da Transação</th>
+                <th scope="col">Operação</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Cliente de Origem</th>
+                <th scope="col">Cliente de Destino</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="c-clickable text-center" data-href="atendimentos-form.html">
+                <th scope="row">10-set-2022 12:35</th>
+                <td>Transferência</td>
+                <td><span class="badge badge-sm badge-danger c-status">R$ 350,00 </span></td>
+                <td>Carlos Henrique</td>
+                <td>José Maria</td>    
+              </tr>
+              <tr class="c-clickable text-center" data-href="atendimentos-form.html">
+                <th scope="row">22-out-2022 15:21</th>
+                <td>Deposito</td>
+                <td><span class="badge badge-sm badge-info c-status">R$ 1240,00 </span></td>
+                <td>  </td>
+                <td>  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+</main>

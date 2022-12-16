@@ -1,0 +1,50 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Admin",
+      "email": "admin",
+      "senha": "admin",
+      "perfil": "ADMIN"
+    },
+    {
+      "id": 2,
+      "nome": "Gerente",
+      "email": "gerente",
+      "senha": "gerente",
+      "perfil": "GERENTE"
+    },
+    {
+      "id": 3,
+      "cliente_id": 1,
+      "senha": "cliente",
+      "perfil": "CLIENTE"
+    }
+  ],
+
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "Cli",
+      "email": "cliente",
+      "cpf": 12345678,
+      "telefone": 4133333333,
+      "salario": 4000.5,
+      "status": true,
+      "conta": 1,
+      "endereco_id": 1 
+    }
+  ],
+
+  "enderecos": [
+    {
+      "id": 1,
+      "logradouro": "Rua Cli",
+      "numero": 1,
+      "cep": 11111111,
+      "cidade": "Curitiba",
+      "estado": "PR",
+      "complemento": "casa"
+    }
+  ]
+}
