@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GerenteService } from '../services/gerente.service';
 import { Cliente, Endereco } from 'src/app/shared';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ModalGerenteComponent } from '../modal-gerente/modal-gerente.component';
+import { ModalRecusarClienteComponent } from '../modal/modal-recusar-cliente/modal-recusar-cliente.component';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -32,9 +32,8 @@ export class HomeGerenteComponent implements OnInit {
             this.clientes = [];
             }
             else {
-              //if(data.find( cliente => cliente.status === false )){
-                this.clientes = data;
-              //} 
+              this.clientes = data;
+              
               }
             }
         });
@@ -44,7 +43,7 @@ export class HomeGerenteComponent implements OnInit {
   
 
   abrirModalRecusar(cliente: Cliente) {
-    const modalRef = this.modalService.open(ModalGerenteComponent);
+    const modalRef = this.modalService.open(ModalRecusarClienteComponent);
     modalRef.componentInstance.cliente = cliente;
   } 
 

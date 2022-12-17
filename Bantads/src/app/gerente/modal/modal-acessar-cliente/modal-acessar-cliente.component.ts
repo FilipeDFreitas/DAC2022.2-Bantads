@@ -2,12 +2,13 @@ import { Component, OnInit , Input} from '@angular/core';
 import { Cliente } from 'src/app/shared';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
+
 @Component({
-  selector: 'app-modal-gerente',
-  templateUrl: './modal-gerente.component.html',
-  styleUrls: ['./modal-gerente.component.css']
+  selector: 'app-modal-acessar-cliente',
+  templateUrl: './modal-acessar-cliente.component.html',
+  styleUrls: ['./modal-acessar-cliente.component.css']
 })
-export class ModalGerenteComponent implements OnInit {
+export class ModalAcessarClienteComponent implements OnInit {
 
   @Input() cliente!:Cliente;
 
@@ -18,11 +19,5 @@ export class ModalGerenteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-
-
-
-
-
 
 }

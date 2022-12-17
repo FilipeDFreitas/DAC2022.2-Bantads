@@ -21,7 +21,7 @@
               <a class="nav-link" href="consultar-cliente.html">Consultar Clientes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="consultar-todos-clientes.html">Consultar Todos os Clientes</a>
+              <a class="nav-link" href="#" [routerLink]="['/gerente/listarTodosClientes']">Consultar Todos os Clientes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="top5.html">TOP 5</a>
@@ -84,7 +84,7 @@
               <td> <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Aprovar
               </button></td>
-             
+            
               
               <!-- Modal *******************ARRUMAR A FUNCIONALIDADE DO MODAL****************** -->
               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -106,7 +106,9 @@
               </div>
               
               <td><button type="button" class="btn btn-danger" (click)="abrirModalRecusar(cliente)">Recusar</button></td>
+            
             </tr>
+
 
 
            

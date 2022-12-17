@@ -4,16 +4,20 @@ import { GerenteService } from './services/gerente.service';
 import { HomeGerenteComponent } from './home-gerente/home-gerente.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { ModalGerenteComponent } from './modal-gerente/modal-gerente.component';
 import { ListarTodosClientesComponent } from './listar-todos-clientes/listar-todos-clientes.component';
+import { ModalRecusarClienteComponent } from './modal/modal-recusar-cliente/modal-recusar-cliente.component';
+import { ModalAcessarClienteComponent } from './modal/modal-acessar-cliente/modal-acessar-cliente.component';
+import { ConsultarClienteComponent } from './consultar-cliente/consultar-cliente.component';
 
 
 
 @NgModule({
   declarations: [
     HomeGerenteComponent,
-    ModalGerenteComponent,
-    ListarTodosClientesComponent
+    ListarTodosClientesComponent,
+    ModalRecusarClienteComponent,
+    ModalAcessarClienteComponent,
+    ConsultarClienteComponent
   ],
   imports: [
     CommonModule,

@@ -1,7 +1,15 @@
 {
     "clientes": [
         {
-            "endereco": "undefined",
+            "endereco": {
+                "id": 1,
+                "logradouro": "Rua Cli1",
+                "numero": 1,
+                "cep": 1111111,
+                "cidade": "Curitiba",
+                "estado": "PR",
+                "complemento": "casa"
+            },
             "id": 1,
             "nome": "cliente1",
             "email": "cliente1@gmail.com",
@@ -9,10 +17,27 @@
             "telefone": 366658952,
             "salario": 2658,
             "status": true,
-            "conta": 26587
+            "conta": {
+                "idCliente": 1,
+                "numeroConta": 2965,
+                "dataCriacao": "undefined",
+                "limite": 250,
+                "idGerente": "undefined",
+                "motivoReprovacao": "aprovada",
+                "dataAprovOuReprov": "undefined",
+                "saldo": 98
+            }
         },
         {
-            "endereco": "undefined",
+            "endereco": {
+                "id": 2,
+                "logradouro": "Rua Cli2",
+                "numero": 2,
+                "cep": 2222222,
+                "cidade": "Curitiba",
+                "estado": "PR",
+                "complemento": "casa"
+            },
             "id": 2,
             "nome": "cliente2",
             "email": "cliente2@gmail.com",
@@ -20,8 +45,16 @@
             "telefone": 366658952,
             "salario": 265,
             "status": false,
-            "conta": 28587
+            "conta": {
+                "idCliente": 2,
+                "numeroConta": 2365,
+                "dataCriacao": "undefined",
+                "limite": 200,
+                "idGerente": "undefined",
+                "motivoReprovacao": "naprovada",
+                "dataAprovOuReprov": "undefined",
+                "saldo": 50
+            }
         }
-        
     ]
 }

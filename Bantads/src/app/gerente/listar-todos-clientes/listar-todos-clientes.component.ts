@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { GerenteService } from '../services/gerente.service';
+import { Cliente, Endereco } from 'src/app/shared';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalRecusarClienteComponent } from '../modal/modal-recusar-cliente/modal-recusar-cliente.component';
+import { Observable } from 'rxjs';
+import { ModalAcessarClienteComponent } from '../modal/modal-acessar-cliente/modal-acessar-cliente.component';
 
 @Component({
   selector: 'app-listar-todos-clientes',
@@ -7,9 +13,45 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarTodosClientesComponent implements OnInit {
 
-  constructor() { }
+  clientes: Cliente[] = [];
 
+  constructor(private gerenteService: GerenteService,
+    private modalService: NgbModal) { }
   ngOnInit(): void {
+
+    this.clientes = this.listarClientes();
+
+
   }
+
+  listarClientes(): Cliente[] {
+
+    this.gerenteService.listarClientes().subscribe({
+      next: (data: Cliente[]) => {
+        if (data == null) {
+          this.clientes = [];
+        }
+        else {
+
+          this.clientes = data;
+
+        }
+      }
+    });
+    return this.clientes;
+  }
+
+
+
+  abrirModalAcessarCliente(cliente: Cliente) {
+    const modalRef = this.modalService.open(ModalAcessarClienteComponent);
+    modalRef.componentInstance.cliente = cliente;
+  }
+
+
+
+
+
+
 
 }

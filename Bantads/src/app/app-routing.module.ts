@@ -11,7 +11,8 @@ import { TransferenciaComponent } from './cliente/transferencia/transferencia.co
 import { SaldoComponent } from './cliente/saldo/saldo.component';
 import { ExtratoComponent } from './cliente/extrato/extrato.component';
 import { HomeGerenteComponent } from './gerente/home-gerente/home-gerente.component';
-import { ModalGerenteComponent } from './gerente/modal-gerente/modal-gerente.component';
+import { ListarTodosClientesComponent } from './gerente/listar-todos-clientes/listar-todos-clientes.component';
+import { ModalRecusarClienteComponent } from './gerente/modal/modal-recusar-cliente/modal-recusar-cliente.component';
 
 
 const routes: Routes = [
@@ -76,8 +77,12 @@ const routes: Routes = [
     component: HomeGerenteComponent,
       },
 
-      { path: 'gerente/modal', 
-      component: ModalGerenteComponent,
+      { path: 'gerente/modal-recusar', 
+      component: ModalRecusarClienteComponent,
+        },
+
+        { path: 'gerente/listarTodosClientes', 
+      component: ListarTodosClientesComponent,
         },
     
     { 
