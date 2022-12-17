@@ -24,7 +24,7 @@
               <a class="nav-link" href="#" [routerLink]="['/gerente/listarTodosClientes']">Consultar Todos os Clientes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="top5.html">TOP 5</a>
+              <a class="nav-link" href="#" [routerLink]="['/gerente/top5']">TOP 5</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="listar-gerentes.html">Listar Gerentes</a>
@@ -86,24 +86,6 @@
               </button></td>
             
               
-              <!-- Modal *******************ARRUMAR A FUNCIONALIDADE DO MODAL****************** -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmação de Aprovação</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <p>tem certeza que deseja aprovar este cliente?</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
               
               <td><button type="button" class="btn btn-danger" (click)="abrirModalRecusar(cliente)">Recusar</button></td>
             

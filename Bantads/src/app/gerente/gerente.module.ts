@@ -8,6 +8,8 @@ import { ListarTodosClientesComponent } from './listar-todos-clientes/listar-tod
 import { ModalRecusarClienteComponent } from './modal/modal-recusar-cliente/modal-recusar-cliente.component';
 import { ModalAcessarClienteComponent } from './modal/modal-acessar-cliente/modal-acessar-cliente.component';
 import { ConsultarClienteComponent } from './consultar-cliente/consultar-cliente.component';
+import { Top5Component } from './top5/top5.component';
+
 
 
 
@@ -17,7 +19,9 @@ import { ConsultarClienteComponent } from './consultar-cliente/consultar-cliente
     ListarTodosClientesComponent,
     ModalRecusarClienteComponent,
     ModalAcessarClienteComponent,
-    ConsultarClienteComponent
+    ConsultarClienteComponent,
+    Top5Component,
+  
   ],
   imports: [
     CommonModule,

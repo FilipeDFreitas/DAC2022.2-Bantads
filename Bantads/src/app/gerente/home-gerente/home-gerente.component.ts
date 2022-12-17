@@ -5,6 +5,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalRecusarClienteComponent } from '../modal/modal-recusar-cliente/modal-recusar-cliente.component';
 import { Observable } from 'rxjs';
 
+
 @Component({
   selector: 'app-home-gerente',
   templateUrl: './home-gerente.component.html',
@@ -32,7 +33,8 @@ export class HomeGerenteComponent implements OnInit {
             this.clientes = [];
             }
             else {
-              this.clientes = data;
+              let data1:Cliente[] = data.filter(cliente => cliente.status === false);
+              this.clientes = data1;
               
               }
             }
