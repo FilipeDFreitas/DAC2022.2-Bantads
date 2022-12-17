@@ -1,4 +1,3 @@
-
 <html lang="pt-BR">
  
   <body>
@@ -44,7 +43,7 @@
     <main>
     <div class="container">
       <h2 class="mb-4">
-        Aprovação de Autocadastro
+        Listar todos os Clientes
       </h2>
 
       <!-- Filtro de visualização de atendimentos -->
@@ -70,9 +69,10 @@
               
               <th scope="col">Nome</th>
               <th scope="col">CPF</th>
-              <th scope="col">Salário</th>
-              <th scope="col"></th>
-              <th scope="col"></th>
+              <th scope="col">Cidade</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Saldo</th>
+           
             </tr>
           </thead>
           <tbody>
@@ -80,37 +80,10 @@
               
               <td>{{cliente.nome}}</td>
               <td>{{cliente.cpf}}</td>
-              <td>{{cliente.salario}}</td>
-              <td> <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Aprovar
-              </button></td>
-             
-              
-              <!-- Modal *******************ARRUMAR A FUNCIONALIDADE DO MODAL****************** -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">Confirmação de Aprovação</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <p>tem certeza que deseja aprovar este cliente?</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <td><button type="button" class="btn btn-danger" (click)="abrirModalRecusar(cliente)">Recusar</button></td>
-            </tr>
-
-
-           
-         
+              <td>{{cliente.cidade}}</td>
+              <td>{{cliente.estado}}</td>
+              <td>{{conta.saldo}}</td>
+                      
           </tbody>
         </table>
         <p *ngIf ="clientes.length==0"> Nenhuma conta pendente de aprovação</p>

@@ -10,6 +10,8 @@ import { SaqueComponent } from './cliente/saque/saque.component';
 import { TransferenciaComponent } from './cliente/transferencia/transferencia.component';
 import { SaldoComponent } from './cliente/saldo/saldo.component';
 import { ExtratoComponent } from './cliente/extrato/extrato.component';
+import { HomeGerenteComponent } from './gerente/home-gerente/home-gerente.component';
+import { ModalGerenteComponent } from './gerente/modal-gerente/modal-gerente.component';
 
 
 const routes: Routes = [
@@ -68,7 +70,16 @@ const routes: Routes = [
     data: {
       role: 'CLIENTE'
      },
-    },     
+    },
+
+     { path: 'gerente/home', 
+    component: HomeGerenteComponent,
+      },
+
+      { path: 'gerente/modal', 
+      component: ModalGerenteComponent,
+        },
+    
     { 
       path: 'login',
       component: LoginComponent},
