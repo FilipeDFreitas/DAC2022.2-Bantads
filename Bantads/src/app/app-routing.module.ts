@@ -14,6 +14,7 @@ import { HomeGerenteComponent } from './gerente/home-gerente/home-gerente.compon
 import { ListarTodosClientesComponent } from './gerente/listar-todos-clientes/listar-todos-clientes.component';
 import { ModalRecusarClienteComponent } from './gerente/modal/modal-recusar-cliente/modal-recusar-cliente.component';
 import { Top5Component } from './gerente/top5/top5.component';
+import { ConsultarClienteComponent } from './gerente/consultar-cliente/consultar-cliente.component';
 
 
 const routes: Routes = [
@@ -87,6 +88,9 @@ const routes: Routes = [
         },
         { path: 'gerente/top5', 
         component: Top5Component,
+          },
+          { path: 'gerente/consultarCliente', 
+        component: ConsultarClienteComponent,
           },
     
     { 

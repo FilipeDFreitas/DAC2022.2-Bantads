@@ -25,20 +25,27 @@ export class ListarTodosClientesComponent implements OnInit {
   }
 
   listarClientes(): Cliente[] {
-
     this.gerenteService.listarClientes().subscribe({
-      next: (data: Cliente[]) => {
+     next: (data: Cliente[]) => {
         if (data == null) {
           this.clientes = [];
-        }
+       }
         else {
+          let data1:Cliente[] = data.filter(cliente => cliente.status === true);
+          data1.sort();
 
-          this.clientes = data;
+          this.clientes = data1;
+
+
 
         }
+
       }
+
     });
+
     return this.clientes;
+
   }
 
 

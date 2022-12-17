@@ -25,29 +25,24 @@ export class Top5Component implements OnInit {
 
   listarClientes(): Cliente[] {
 
+
+
     this.gerenteService.listarClientes().subscribe({
       next: (data: Cliente[]) => {
         if (data == null) {
           this.clientes = [];
         }
         else {
-          let data1:Cliente[] = data.filter(cliente => cliente.conta?.saldo);
-
-          function(a:Conta, b:Conta) {
-            return a.saldo? < b.saldo?;
-
-          }
-
-
-          data1.sort(function);
-          this.clientes = data1.slice(0,5);
-
+          let data1: Cliente[] = data.filter(cliente => cliente.status === true);
+          data1.sort(function (a, b) {
+            return b.conta?.saldo! - a.conta?.saldo!;
+          });
+          this.clientes = data1.slice(0, 5);
         }
       }
     });
     return this.clientes;
   }
-
 
 
   abrirModalAcessarCliente(cliente: Cliente) {

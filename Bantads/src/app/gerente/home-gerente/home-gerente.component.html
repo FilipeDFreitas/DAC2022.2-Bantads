@@ -5,7 +5,7 @@
 
     
 
-    <!-- Cabeçalho da página -->
+  
     <header class="container-fluid bg-dark mb-5">
       <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
         <a class="navbar-brand" href="index.html">
@@ -15,10 +15,10 @@
         <div class="container">
           <ul class="navbar-nav text-white">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Início</a>
+              <a class="nav-link active" href="#" [routerLink]="['/gerente/home']">Início</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="consultar-cliente.html">Consultar Clientes</a>
+              <a class="nav-link" href="#"[routerLink]="['/gerente/consultarCliente']">Consultar Clientes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#" [routerLink]="['/gerente/listarTodosClientes']">Consultar Todos os Clientes</a>
