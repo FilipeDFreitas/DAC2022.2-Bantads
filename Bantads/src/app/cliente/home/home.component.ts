@@ -21,9 +21,12 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.cliente = new Cliente();
     this.loading = false;
-    this.id = this.route.snapshot.params['id'];
-    this.clienteService.buscarPorId(+this.id).subscribe(cliente => 
+    this.id = "2";
+
+    this.clienteService.buscarPorId(+this.id).subscribe(cliente =>
       { this.cliente = cliente;});
+
   }
 
 }
+
