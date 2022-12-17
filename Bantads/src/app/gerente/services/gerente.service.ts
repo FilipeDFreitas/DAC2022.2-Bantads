@@ -1,19 +1,44 @@
 import { Injectable } from '@angular/core';
 import { Cliente } from 'src/app/shared';
 
-const LS_CHAVE: string = "contas";
+
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+
+
+
+
+//const LS_CHAVE: string = "contas";
 
 @Injectable({
   providedIn: 'root'
 })
 export class GerenteService {
 
-  constructor() { }
+  BASE_URL = "http://localhost:3000/clientes/";
+  httpOptions = {
+    headers: new HttpHeaders({
+    'Content-Type': 'application/json'
+    })
+  };
 
-  listarClientes(): Cliente[]{
-    const clientes = localStorage[LS_CHAVE];
-    return clientes ? JSON.parse(clientes) : [];
-  }
+  constructor(private httpClient: HttpClient) { }
+
+  listarClientes(): Observable<Cliente[]> {
+    return this.httpClient.get<Cliente[]>(this.BASE_URL,
+    this.httpOptions);
+    }
+
+
+  
+    
+
+  // listarClientes(): Cliente[]{
+  //   //const clientes = localStorage[LS_CHAVE];
+  //   return clientes ? JSON.parse(clientes) : [];
+  // }
+
 
 
 

@@ -1,0 +1,27 @@
+{
+    "clientes": [
+        {
+            "endereco": "undefined",
+            "id": 1,
+            "nome": "cliente1",
+            "email": "cliente1@gmail.com",
+            "cpf": 9236548,
+            "telefone": 366658952,
+            "salario": 2658,
+            "status": true,
+            "conta": 26587
+        },
+        {
+            "endereco": "undefined",
+            "id": 2,
+            "nome": "cliente2",
+            "email": "cliente2@gmail.com",
+            "cpf": 9236541,
+            "telefone": 366658952,
+            "salario": 265,
+            "status": false,
+            "conta": 28587
+        }
+        
+    ]
+}
