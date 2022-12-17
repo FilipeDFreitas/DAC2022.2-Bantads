@@ -18,29 +18,25 @@ export class HomeGerenteComponent implements OnInit {
                 private modalService: NgbModal) { }
 
   ngOnInit(): void {
-    console.log("entrou aqui no init");
+    
     this.clientes = this.listarClientes();
     
   
   }
 
   listarClientes(): Cliente[] {
-    console.log("entrou aqui no listar")
+    
         this.gerenteService.listarClientes().subscribe({
           next: (data: Cliente[]) => {
             if (data == null) {
             this.clientes = [];
             }
             else {
-              console.log("entrou aqui no else")
-              if(data.find( cliente => cliente.status === false )){
-                console.log("entrou aqui");
-              this.clientes = data;
-              } 
+              //if(data.find( cliente => cliente.status === false )){
+                this.clientes = data;
+              //} 
               }
             }
-            
-
         });
         return this.clientes;
 
