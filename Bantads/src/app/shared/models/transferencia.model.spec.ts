@@ -1,4 +1,4 @@
-import { Transferencia } from './transferencia.model';
+import { Transferencia } from './Transferencia.model';
 
 describe('Transferencia', () => {
   it('should create an instance', () => {

@@ -33,7 +33,7 @@
                 <th scope="col">Cliente de Destino</th>
               </tr>
             </thead>
-            <tbody *ngIf="!!transferencias; else listaVazia">
+            <tbody *ngIf="!!transferencias ; else listaVazia">
               <tr class="c-clickable text-center" *ngFor="let transferencia of transferencias">
                 <td> {{ transferencia.data | date : 'short' : '' : 'pt-BR'}} </td>
                 <td>Transferência</td>
