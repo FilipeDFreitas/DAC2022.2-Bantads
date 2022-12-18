@@ -86,6 +86,12 @@ const routes: Routes = [
   },
 
   {
+    path: 'gerente',
+    redirectTo: 'gerente/home',
+  },
+
+
+  {
     path: 'gerente/home',
     component: HomeGerenteComponent,
     canActivate: [AuthGuard],

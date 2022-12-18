@@ -16,6 +16,7 @@ import { GerenteService } from '../../services/gerente.service';
 export class ModalRecusarClienteComponent implements OnInit {
   @ViewChild ('formRecusar') formRecusar!: NgForm;
   cliente!: Cliente;
+  loading!: boolean;
 
  
 
@@ -34,17 +35,22 @@ export class ModalRecusarClienteComponent implements OnInit {
   }
 
   recusar(): void {
+    this.loading = true;
     if(this.formRecusar.form.valid){
 
       this.cliente.conta!.dataAprovOuReprov = new Date();
       console.log(this.cliente.conta!.motivoReprovacao);
       console.log("chegou no modal");
-      this.gerenteService.recusar(this.cliente);
-      this.activeModal.close();
-      this.router.navigate(['/gerente/home']);
-      
-    }
+      this.gerenteService.recusar(this.cliente).subscribe(cliente => {
+        this.loading = false;
+        this.router.navigate(['/gerente/home']);
+        
+      }
+    );
     
+    this.activeModal.close();
+    }
+    this.loading = false;
     
     
 
