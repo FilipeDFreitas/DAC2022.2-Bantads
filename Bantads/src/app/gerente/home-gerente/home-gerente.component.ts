@@ -15,13 +15,13 @@ import { Router } from '@angular/router';
 export class HomeGerenteComponent implements OnInit {
 
   clientes : Cliente[] = [];
+  loading!: boolean;
 
   constructor( private gerenteService : GerenteService,
                 private modalService: NgbModal,
                 private router: Router) { }
 
   ngOnInit(): void {
-    
     this.clientes = this.listarClientes();
     
   
@@ -49,6 +49,7 @@ export class HomeGerenteComponent implements OnInit {
   
   aprovar(cliente: Cliente){
 
+    this.loading = true;
    
       cliente.conta!.motivoReprovacao = "aprovado";
       cliente.status = true;
@@ -56,11 +57,14 @@ export class HomeGerenteComponent implements OnInit {
       console.log(cliente.conta!.motivoReprovacao);
       console.log("chegou no modal");
       console.log(cliente.conta!.dataAprovOuReprov);
-      this.gerenteService.aprovar(cliente);
-      this.router.navigate(['/gerente/home']);
+      this.gerenteService.aprovar(cliente).subscribe(cliente => {
+        this.loading = false;
+        this.router.navigate(['/gerente/home']);});
+      }
+    
       
     
-  }
+
 
   abrirModalRecusar(cliente: Cliente) {
     const modalRef = this.modalService.open(ModalRecusarClienteComponent);

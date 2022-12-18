@@ -32,9 +32,18 @@ export class ListarTodosClientesComponent implements OnInit {
        }
         else {
           let data1:Cliente[] = data.filter(cliente => cliente.status === true);
-          data1.sort();
+          let data2:Cliente[] = data1.filter(cliente => cliente.nome?.includes("") )
+          function compare(a: Cliente , b: Cliente) {
+            if (a.nome! < b.nome!)
+               return -1;
+            if (a.nome! < b.nome!)
+              return 1;
+            return 0;
+          }
+          
+         data2.sort(compare);
 
-          this.clientes = data1;
+          this.clientes = data2;
 
 
 
@@ -56,7 +65,7 @@ export class ListarTodosClientesComponent implements OnInit {
         }
         else {
           let data1: Cliente[] = data.filter(cliente => cliente.status === true);
-          let data2: Cliente[] = data.filter(cliente => cliente.cpf?.toString().includes(cpf));
+          let data2: Cliente[] = data1.filter(cliente => cliente.cpf?.toString().includes(cpf));
           this.clientes = data2;
       }
       
@@ -76,7 +85,7 @@ export class ListarTodosClientesComponent implements OnInit {
         }
         else {
           let data1: Cliente[] = data.filter(cliente => cliente.status === true);
-          let data2: Cliente[] = data.filter(cliente => cliente.nome?.includes(nome));
+          let data2: Cliente[] = data1.filter(cliente => cliente.nome?.includes(nome));
           
           this.clientes = data2;
         }

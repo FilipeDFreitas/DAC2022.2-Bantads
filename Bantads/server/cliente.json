@@ -219,8 +219,8 @@
         "dataCriacao": "undefined",
         "limite": 2266,
         "idGerente": "undefined",
-        "motivoReprovacao": "lalalalalalalalala",
-        "dataAprovOuReprov": "2022-12-18T22:56:50.000Z",
+        "motivoReprovacao": "aprovado",
+        "dataAprovOuReprov": "2022-12-18T23:44:25.789Z",
         "saldo": 9583
       }
     },
@@ -247,8 +247,8 @@
         "dataCriacao": "undefined",
         "limite": 1010,
         "idGerente": "undefined",
-        "motivoReprovacao": "undefined",
-        "dataAprovOuReprov": "undefined",
+        "motivoReprovacao": "aprovado",
+        "dataAprovOuReprov": "2022-12-18T23:44:35.189Z",
         "saldo": 988
       }
     }
