@@ -14,12 +14,12 @@
           <label for="dataFim">Data Final</label>
           <input type="date" class="form-control" id="dataFim" name="dataFim" required>
         </div>
-        <button type="button" class="btn btn-primary" 
+        <button type="button" class="btn btn-primary"
           [disabled]="!formExtrato.form.valid">
           <i class="fa fa-file-invoice-dollar" aria-hidden="true"></i> Consultar Extrato
         </button>
       </form>
-      
+
     <!-- Tabela com atendimentos em aberto -->
     <div class="mt-5">
 
@@ -33,23 +33,20 @@
                 <th scope="col">Cliente de Destino</th>
               </tr>
             </thead>
-            <tbody>
-              <tr class="c-clickable text-center" data-href="atendimentos-form.html">
-                <th scope="row">10-set-2022 12:35</th>
+            <tbody *ngIf="!!transferencias; else listaVazia">
+              <tr class="c-clickable text-center" *ngFor="let transferencia of transferencias">
+                <td> {{ transferencia.data | date : 'short' : '' : 'pt-BR'}} </td>
                 <td>Transferência</td>
-                <td><span class="badge badge-sm badge-danger c-status">R$ 350,00 </span></td>
-                <td>Carlos Henrique</td>
-                <td>José Maria</td>    
+                <td>{{ transferencia.valor}}</td>
+                <td>{{transferencia.id}}</td>
+                <td>{{ transferencia.destino }}</td>
               </tr>
-              <tr class="c-clickable text-center" data-href="atendimentos-form.html">
-                <th scope="row">22-out-2022 15:21</th>
-                <td>Deposito</td>
-                <td><span class="badge badge-sm badge-info c-status">R$ 1240,00 </span></td>
-                <td>  </td>
-                <td>  </td>
-              </tr>
+
             </tbody>
           </table>
+          <ng-template #listaVazia>
+            <p>Nenhuma transferência cadastrada</p>
+          </ng-template>
         </div>
     </div>
 </main>

@@ -48,38 +48,6 @@
       "telefone": 41999999999,
       "salario": 5000,
       "id": 2
-    },
-    {
-      "endereco": {
-        "logradouro": "Rua Marcilio Dias",
-        "numero": 315,
-        "cep": "82820000",
-        "cidade": "Curitiba",
-        "estado": "PR",
-        "complemento": "xx"
-      },
-      "nome": "bbb",
-      "email": "bb@aaa",
-      "cpf": 22222222222,
-      "telefone": 41999999999,
-      "salario": 1000,
-      "id": 3
-    },
-    {
-      "endereco": {
-        "logradouro": "rua xxx",
-        "numero": 111,
-        "cep": "33333333",
-        "cidade": "Curitiba",
-        "estado": "PR",
-        "complemento": "xx"
-      },
-      "nome": "ccc",
-      "email": "ccc@cc",
-      "cpf": 55555555555,
-      "telefone": 41888888888,
-      "salario": 6000,
-      "id": 4
     }
   ],
   "enderecos": [
@@ -91,6 +59,50 @@
       "cidade": "Curitiba",
       "estado": "PR",
       "complemento": "casa"
+    }
+  ],
+  "transferencias": [
+    {
+      "id": 1,
+      "valor": 35,
+      "destino": "1212-1",
+      "data": "2020-11-06T21:34:17.155Z"
+    },
+    {
+      "id": 2,
+      "valor": 40,
+      "destino": "1213-1",
+      "data": "2020-11-10T22:28:17.155Z"
+    },
+    {
+      "valor": 2800,
+      "destino": "5555-2",
+      "data": "2022-12-17T20:37:09.282Z",
+      "id": 3
+    },
+    {
+      "valor": 1280,
+      "destino": "28954-4",
+      "data": "2022-12-17T20:39:47.584Z",
+      "id": 4
+    },
+    {
+      "valor": 3500,
+      "destino": "12345-2",
+      "data": "2022-12-17T20:47:05.775Z",
+      "id": 5
+    },
+    {
+      "valor": 125,
+      "destino": "3333",
+      "data": "2022-12-17T21:16:29.811Z",
+      "id": 6
+    },
+    {
+      "valor": 200,
+      "destino": "12120-0",
+      "data": "2022-12-17T21:26:55.436Z",
+      "id": 7
     }
   ]
 }

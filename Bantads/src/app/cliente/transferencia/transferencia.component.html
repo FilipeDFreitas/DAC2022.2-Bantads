@@ -5,7 +5,7 @@
   </h2>
 
   <!-- Formulário dos dados do usuário -->
-  <form action="#" method="POST" class="formulario" (ngSubmit)="transferir()">
+  <form class="formulario" (ngSubmit)="transferir()">
     <div class="row">
       <div class="col-12 jsutify-content-between">
         <button type="submit" class="btn btn-primary float-right w-25">
@@ -23,7 +23,8 @@
                 <i class="fas fa-user"></i>
               </span>
             </div>
-            <input type="text" id="numeroContaT" class="form-control" value="000-00" />
+            <input type="text" id="destino" class="form-control" name = "destino" value="000-00"
+                   [(ngModel)]="destino"/>
           </div>
         </div>
 
@@ -35,7 +36,8 @@
                   <i class="fas fa-money-bill"></i>
                 </span>
               </div>
-              <input type="number" class="form-control" name="vTrans" placeholder="R$ 0000,00" />
+              <input type="number" class="form-control" id="valor" name="valor" placeholder="R$ 0000,00"
+                     [(ngModel)]="valor" />
             </div>
           </div>
         </div>
