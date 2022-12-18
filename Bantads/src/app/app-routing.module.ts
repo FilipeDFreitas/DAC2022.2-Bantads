@@ -18,89 +18,126 @@ import { ConsultarClienteComponent } from './gerente/consultar-cliente/consultar
 
 
 const routes: Routes = [
-    { path: '', 
-      redirectTo: 'login', 
-      pathMatch: 'full' },
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full'
+  },
 
-    { path: 'clientes', 
-      redirectTo: 'clientes/home',
+  {
+    path: 'clientes',
+    redirectTo: 'clientes/home',
+  },
+  {
+    path: 'clientes/home',
+    component: HomeComponent,
+    canActivate: [AuthGuard],
+    data: {
+      role: 'CLIENTE'
+    }
+  },
+  {
+    path: 'clientes/cliente-editar',
+    component: ClienteDadosComponent,
+    canActivate: [AuthGuard],
+    data: {
+      role: 'CLIENTE'
     },
-    { path: 'clientes/home', 
-      component:  HomeComponent,
-      canActivate: [AuthGuard],
-      data: {
-        role: 'CLIENTE'
-      }   
+  },
+  {
+    path: 'clientes/depositar',
+    component: DepositarComponent,
+    canActivate: [AuthGuard],
+    data: {
+      role: 'CLIENTE'
     },
-    { path: 'clientes/cliente-editar', 
-      component: ClienteDadosComponent,
-      canActivate: [AuthGuard],
-      data: {
-        role: 'CLIENTE'
-      },
-    }, 
-    { path: 'clientes/depositar', 
-      component: DepositarComponent,
-      canActivate: [AuthGuard],
-      data: {
-        role: 'CLIENTE'
-      },
+  },
+  {
+    path: 'clientes/saque',
+    component: SaqueComponent,
+    canActivate: [AuthGuard],
+    data: {
+      role: 'CLIENTE'
     },
-    { path: 'clientes/saque', 
-      component: SaqueComponent,
-      canActivate: [AuthGuard],
-      data: {
-        role: 'CLIENTE'
-      },
+  },
+  {
+    path: 'clientes/transferir',
+    component: TransferenciaComponent,
+    canActivate: [AuthGuard],
+    data: {
+      role: 'CLIENTE'
     },
-    { path: 'clientes/transferir', 
-      component: TransferenciaComponent,
-      canActivate: [AuthGuard],
-      data: {
-        role: 'CLIENTE'
-      },
+  },
+  {
+    path: 'clientes/saldo',
+    component: SaldoComponent,
+    canActivate: [AuthGuard],
+    data: {
+      role: 'CLIENTE'
     },
-    { path: 'clientes/saldo', 
-      component: SaldoComponent,
-      canActivate: [AuthGuard],
-      data: {
-        role: 'CLIENTE'
-      },
-    }, 
-    { path: 'clientes/extrato', 
+  },
+  {
+    path: 'clientes/extrato',
     component: ExtratoComponent,
     canActivate: [AuthGuard],
     data: {
       role: 'CLIENTE'
-     },
+    },
+  },
+
+  {
+    path: 'gerente/home',
+    component: HomeGerenteComponent,
+    canActivate: [AuthGuard],
+    data: {
+      role: 'GERENTE'
     },
 
-     { path: 'gerente/home', 
-    component: HomeGerenteComponent,
-      },
+  },
 
-      { path: 'gerente/modal-recusar/:id', 
-      component: ModalRecusarClienteComponent,
-        },
+  {
+    path: 'gerente/modal-recusar/:id',
+    component: ModalRecusarClienteComponent,
+    canActivate: [AuthGuard],
+    data: {
+      role: 'GERENTE'
+    },
+  },
 
-        { path: 'gerente/listarTodosClientes', 
-      component: ListarTodosClientesComponent,
-        },
-        { path: 'gerente/top5', 
-        component: Top5Component,
-          },
-          { path: 'gerente/consultarCliente', 
-        component: ConsultarClienteComponent,
-          },
-    
-    { 
-      path: 'login',
-      component: LoginComponent},
-    ...LoginRoutes
+  {
+    path: 'gerente/listarTodosClientes',
+    component: ListarTodosClientesComponent,
+    canActivate: [AuthGuard],
+    data: {
+      role: 'GERENTE'
+    },
+  },
+  {
+    path: 'gerente/top5',
+    component: Top5Component,
+    canActivate: [AuthGuard],
+    data: {
+      role: 'GERENTE'
+    },
+  },
+  {
+    path: 'gerente/consultarCliente',
+    component: ConsultarClienteComponent,
+    canActivate: [AuthGuard],
+    data: {
+      role: 'GERENTE'
+    },
+  },
+
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  ...LoginRoutes
 ];
 
-    @NgModule({
-        imports: [RouterModule.forRoot(routes)],
-        exports: [RouterModule]
-    })
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
 export class AppRoutingModule { }

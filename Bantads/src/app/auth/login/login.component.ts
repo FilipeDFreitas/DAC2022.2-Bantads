@@ -57,8 +57,7 @@ export class LoginComponent implements OnInit {
             //ajustar rota administrador
             this.router.navigate([""]);
           } else if (usu.perfil == "GERENTE") {
-            //ajustar rota gerente
-            this.router.navigate([""])
+            this.router.navigate(['/gerente/home']);
           } else if (usu.perfil == "CLIENTE") {
             this.router.navigate(['/clientes']);
           }

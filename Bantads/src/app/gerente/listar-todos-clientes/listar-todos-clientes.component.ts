@@ -48,7 +48,7 @@ export class ListarTodosClientesComponent implements OnInit {
 
   }
 
-  buscarCpf(cpf: String): Cliente[] {
+  buscarCpf(cpf: string): Cliente[] {
     this.gerenteService.listarClientes().subscribe({
       next: (data: Cliente[]) => {
         if (data == null) {
@@ -56,18 +56,19 @@ export class ListarTodosClientesComponent implements OnInit {
         }
         else {
           let data1: Cliente[] = data.filter(cliente => cliente.status === true);
-          let data2: Cliente[] = data.filter(cliente => cliente.cpf!.toString() === cpf);
-          
+          let data2: Cliente[] = data.filter(cliente => cliente.cpf?.toString().includes(cpf));
           this.clientes = data2;
-        }
       }
+      
+    }
+
     });
     
     return this.clientes;
     
   }
 
-  buscarNome(nome: String): Cliente[] {
+  buscarNome(nome: string): Cliente[] {
     this.gerenteService.listarClientes().subscribe({
       next: (data: Cliente[]) => {
         if (data == null) {
@@ -75,7 +76,7 @@ export class ListarTodosClientesComponent implements OnInit {
         }
         else {
           let data1: Cliente[] = data.filter(cliente => cliente.status === true);
-          let data2: Cliente[] = data.filter(cliente => cliente.nome! === nome);
+          let data2: Cliente[] = data.filter(cliente => cliente.nome?.includes(nome));
           
           this.clientes = data2;
         }
