@@ -2,6 +2,7 @@
 <html lang="pt-BR">
   <body>
 
+
     <!-- Cabeçalho da página -->
     <header class="container-fluid bg-white mb-5">
       <nav class="navbar navbar-expand-lg navbar-light" role="navigation">
@@ -14,7 +15,7 @@
         <div class="container">
           <ul class="navbar-nav text-white">
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Início</a>
+              <a class="nav-link active" [routerLink]="['/adm/home']" href="">Início</a>
             </li>
             <li class="nav-item">
 
@@ -23,7 +24,7 @@
 
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="colaboradores.html">Gerentes</a>
+              <a class="nav-link" [routerLink]="['/adm/lista']" href="">Gerentes</a>
             </li>
           </ul>
         </div>
@@ -36,101 +37,133 @@
       </nav>
     </header>
 
+
     <!-- Corpo da página -->
     <main class="container">
       <h2 class="mb-4">
-        Bem-vindo(a), <strong>[nome do Administrador]</strong>
+        Cadastro de Gerentes
       </h2>
-      <div class="row">
-        <div class="card-deck" style="width: 100%">
-          <div class="card border border-primary text-primary">
-            <div class="card-body">
-              <p class="card-text h5">
-                <strong>[Gerente 01]</strong>
-              </p>
-              <p class="card-text h6">
-                120 clientes
-              </p><strong>Saldos: </strong>
-                <p class="card-text h6 ">Positivos: <br><strong class="text-success">R$ 27.788,98</strong></p>
-                <p class="card-text h6 ">Negativos: <br><strong class="text-danger">R$ 217.788,98</strong></p>
 
+      <!-- Botão para abertura de novo atendimento -->
+      <a [routerLink]="['/adm/criar']" href="" class="btn btn-lg btn-primary">
+        <i class="fa fa-plus"></i>
+        Novo Colaborador
+      </a>
 
-              <a href="atendimentos.html" class="stretched-link h-0"></a>
-            </div>
-          </div>
+      <!-- Tabela com atendimentos em aberto -->
+      <div class="mt-5">
+        <table class="table table-hover">
+          <thead class="c-thead">
+            <tr class="text-center">
+              <th scope="col">#</th>
+              <th scope="col">Nome</th>
+              <th scope="col">CPF</th>
+              <th scope="col">E-mail</th>
+              <th scope="col">Telefone</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="text-center">
+              <th scope="row">809</th>
+              <td class="text-left">Josnei da Silva Peixoto</td>
+              <td>123.456.789-10</td>
+              <td>josnei1976@gmail.com</td>
+              <td>99988-8777</td>
 
-          <div class="card border border-primary text-primary">
-            <div class="card-body">
-              <p class="card-text h5">
-                <strong>[Gerente 02]</strong>
-              </p>
-              <p class="card-text h6">
-                172 clientes
-              </p><strong>Saldos: </strong>
-                <p class="card-text h6 ">Positivos: <br><strong class="text-success">R$ 7.788,98</strong></p>
-                <p class="card-text h6 ">Negativos: <br><strong class="text-danger">R$ 417.788,98</strong></p>
+              <td>
+                <a [routerLink]="['/adm/editar']" href="" class="btn btn-sm btn-success" title="Visualizar"><i class="fas fa-eye"></i></a>
+                <a [routerLink]="['/adm/editar']" href="" class="btn btn-sm btn-info" title="Editar"><i class="fas fa-edit"></i></a>
+                <a href="#" class="btn btn-sm btn-danger" title="Excluir"><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+            <tr class="text-center">
+              <th scope="row">820</th>
+              <td class="text-left">Josnete Claudete</td>
+              <td>111.222.333-44</td>
+              
+              <td>josclau@hotmail.com</td>
+              <td>99988-8777</td>
 
+              <td>
+                <a [routerLink]="['/adm/editar']" href="" class="btn btn-sm btn-success" title="Visualizar"><i class="fas fa-eye"></i></a>
+                <a [routerLink]="['/adm/editar']" href="" class="btn btn-sm btn-info" title="Editar"><i class="fas fa-edit"></i></a>
+                <a href="#" class="btn btn-sm btn-danger" title="Excluir"><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+            <tr class="text-center">
+              <th scope="row">822</th>
+              <td class="text-left">Aurélio Dicionários</td>
+              <td>444.555.666-77</td>
+              
+              <td>audic@gmail.com</td>
+              <td>99988-8777</td>
 
-              <a href="atendimentos.html" class="stretched-link h-0"></a>
-            </div>
-          </div>
-          
-          <div class="card border border-primary text-primary">
-            <div class="card-body">
-              <p class="card-text h5">
-                <strong>[Gerente 03]</strong>
-              </p>
-              <p class="card-text h6">
-                403 clientes
-              </p><strong>Saldos: </strong>
-                <p class="card-text h6 ">Positivos: <br><strong class="text-success">R$ 450.568,65</strong></p>
-                <p class="card-text h6 ">Negativos: <br><strong class="text-danger">R$ 177.568,07</strong></p>
+              <td>
+                <a [routerLink]="['/adm/editar']" href="" class="btn btn-sm btn-success" title="Visualizar"><i class="fas fa-eye"></i></a>
+                <a [routerLink]="['/adm/editar']" href="" class="btn btn-sm btn-info" title="Editar"><i class="fas fa-edit"></i></a>
+                <a href="#" class="btn btn-sm btn-danger" title="Excluir"><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+            <tr class="text-center">
+              <th scope="row">829</th>
+              <td class="text-left">Darti Veiderson</td>
+              <td>777.888.999-00</td>
+              
+              <td>sithlord@gmail.com</td>
+              <td>99988-8777</td>
 
+              <td>
+                <a [routerLink]="['/adm/editar']" href="" class="btn btn-sm btn-success" title="Visualizar"><i class="fas fa-eye"></i></a>
+                <a [routerLink]="['/adm/editar']" href="" class="btn btn-sm btn-info" title="Editar"><i class="fas fa-edit"></i></a>
+                <a href="#" class="btn btn-sm btn-danger" title="Excluir"><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+            <tr class="text-center">
+              <th scope="row">830</th>
+              <td class="text-left">Milkicheickson Ostentação</td>
+              <td>098.765.432-10</td>
+              
+              <td>Milky@gmail.com</td>
+              <td>99988-8777</td>
 
-              <a href="atendimentos.html" class="stretched-link h-0"></a>
-            </div>
-          </div>
+              <td>
+                <a [routerLink]="['/adm/editar']" href="" class="btn btn-sm btn-success" title="Visualizar"><i class="fas fa-eye"></i></a>
+                <a [routerLink]="['/adm/editar']" href="" class="btn btn-sm btn-info" title="Editar"><i class="fas fa-edit"></i></a>
+                <a href="#" class="btn btn-sm btn-danger" title="Excluir"><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+            <tr class="text-center">
+              <th scope="row">832</th>
+              <td class="text-left">Dilermano Júnior</td>
+              <td>090.871.219-01</td>
+              <td>Diljr@gmail.com</td>
+              <td>99988-8777</td>
 
-          <div class="card border border-primary text-primary">
-            <div class="card-body">
-              <p class="card-text h5">
-                <strong>[Gerente 04]</strong>
-              </p>
-              <p class="card-text h6">
-                14 clientes
-              </p><strong>Saldos: </strong>
-                <p class="card-text h6 ">Positivos: <br><strong class="text-success">R$ 7.278,98</strong></p>
-                <p class="card-text h6 ">Negativos: <br><strong class="text-danger">R$ 2.288,80</strong></p>
+              <td>
+                <a [routerLink]="['/adm/editar']" href="" class="btn btn-sm btn-success" title="Visualizar"><i class="fas fa-eye"></i></a>
+                <a [routerLink]="['/adm/editar']" href="" class="btn btn-sm btn-info" title="Editar"><i class="fas fa-edit"></i></a>
+                <a href="#" class="btn btn-sm btn-danger" title="Excluir"><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+            <tr class="text-center">
+              <th scope="row">834</th>
+              <td class="text-left">Samuela Fisher</td>
+              <td>123.321.132-31</td>
+              <td>Sam27@gmail.com</td>
+              <td>99988-8777</td>
 
-
-              <a href="atendimentos.html" class="stretched-link h-0"></a>
-            </div>
-          </div>
-
-          <div class="card border border-primary text-primary">
-            <div class="card-body">
-              <p class="card-text h5">
-                <strong>[Gerente 05]</strong>
-              </p>
-              <p class="card-text h6">
-                3 clientes
-              </p><strong>Saldos: </strong>
-                <p class="card-text h6 ">Positivos: <br><strong class="text-success">R$ 7.827.988,54</strong></p>
-                <p class="card-text h6 ">Negativos: <br><strong class="text-danger">R$ 4.217.988,63</strong></p>
-
-
-              <a href="atendimentos.html" class="stretched-link h-0"></a>
-            </div>
-          </div>
-          
-          
-          
-          
-        </div>
+              <td>
+                <a [routerLink]="['/adm/editar']" href="" class="btn btn-sm btn-success" title="Visualizar"><i class="fas fa-eye"></i></a>
+                <a [routerLink]="['/adm/editar']" href="" class="btn btn-sm btn-info" title="Editar"><i class="fas fa-edit"></i></a>
+                <a href="#" class="btn btn-sm btn-danger" title="Excluir"><i class="fas fa-trash-alt"></i></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </main>
 
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/scripts.js"></script>
-  </body>
-</html>
+  
+

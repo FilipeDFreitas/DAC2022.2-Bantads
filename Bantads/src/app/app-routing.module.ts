@@ -14,6 +14,7 @@ import { ConsultarClientesAdmComponent } from './administrador/consultar-cliente
 import { CriarAdmComponent } from './administrador/criar-adm/criar-adm.component';
 import { EditarAdmComponent } from './administrador/editar-adm/editar-adm.component';
 import { ListarAdmComponent } from './administrador/listar-adm/listar-adm.component';
+import { HomeAdmComponent } from './administrador/home-adm/home-adm.component';
 
 
 
@@ -80,7 +81,10 @@ const routes: Routes = [
     ...LoginRoutes,
 
     { path: 'adm',
-      redirectTo: 'adm/lista'
+      redirectTo: 'adm/home'
+    },
+    { path: 'adm/home',
+      component: HomeAdmComponent
     },
     { path: 'adm/lista',
       component: ListarAdmComponent

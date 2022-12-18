@@ -15,16 +15,16 @@
         <div class="container">
           <ul class="navbar-nav text-white">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Início</a>
+              <a class="nav-link active" [routerLink]="['/adm/home']" href="">Início</a>
             </li>
             <li class="nav-item">
 
-              <a class="nav-link active" href="consultar-todos-clientes.html">Relatório de Clientes</a>
+              <a class="nav-link" [routerLink]="['/adm/consulta']" href="">Relatório de Clientes</a>
 
 
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="colaboradores.html">Gerentes</a>
+              <a class="nav-link" [routerLink]="['/adm/lista']" href="">Gerentes</a>
             </li>
           </ul>
         </div>
