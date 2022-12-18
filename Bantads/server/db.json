@@ -35,15 +35,15 @@
     },
     {
       "endereco": {
-        "logradouro": "rua aaa",
-        "numero": 111,
-        "cep": "82820000",
+        "cep": "82860490",
+        "logradouro": "Rua Adelino Alexandrino Marquezini",
+        "numero": 180,
+        "complemento": "180",
         "cidade": "Curitiba",
-        "estado": "PR",
-        "complemento": "xx"
+        "estado": "PR"
       },
       "nome": "aaa",
-      "email": "aa@aaa",
+      "email": "aaa@aaa",
       "cpf": 11111111111,
       "telefone": 41999999999,
       "salario": 5000,
@@ -51,35 +51,146 @@
     },
     {
       "endereco": {
-        "logradouro": "Rua Marcilio Dias",
-        "numero": 315,
+        "logradouro": "Rua Adelino Alexandrino Marquezini",
+        "numero": 180,
+        "cep": "82860490",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "180"
+      },
+      "nome": "CLAUDIA BASTCHEN",
+      "email": "clau.eng.mec@gmail.com",
+      "cpf": 21536,
+      "telefone": 41996529582,
+      "salario": 1000,
+      "conta": {},
+      "id": 3
+    },
+    {
+      "endereco": {
+        "logradouro": "Rua Adelino Alexandrino Marquezini",
+        "numero": 180,
         "cep": "82820000",
         "cidade": "Curitiba",
         "estado": "PR",
         "complemento": "xx"
       },
-      "nome": "bbb",
-      "email": "bb@aaa",
-      "cpf": 22222222222,
+      "nome": "eee",
+      "email": "ee@aaa",
+      "cpf": 5824785241,
       "telefone": 41999999999,
-      "salario": 1000,
-      "id": 3
+      "salario": 25000,
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2021-04-23T10:00:00.000Z",
+        "motivoReprovacao": "aguardando"
+      },
+      "id": 4
     },
     {
       "endereco": {
-        "logradouro": "rua xxx",
-        "numero": 111,
-        "cep": "33333333",
+        "logradouro": "rua amarela",
+        "numero": 123,
+        "cep": "82820000",
         "cidade": "Curitiba",
         "estado": "PR",
         "complemento": "xx"
       },
-      "nome": "ccc",
-      "email": "ccc@cc",
-      "cpf": 55555555555,
-      "telefone": 41888888888,
-      "salario": 6000,
-      "id": 4
+      "nome": "ppp",
+      "email": "pp@aaa",
+      "cpf": 12345693230,
+      "telefone": 41999999999,
+      "salario": 1520,
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2021-04-23T10:00:00.000Z",
+        "motivoReprovacao": "aguardando"
+      },
+      "id": 5
+    },
+    {
+      "endereco": {
+        "logradouro": "rua verde",
+        "numero": 3,
+        "cep": "82820000",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "xx"
+      },
+      "nome": "qqq",
+      "email": "qq@aaa",
+      "cpf": 14258575956,
+      "telefone": 41999999999,
+      "salario": 10000,
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2021-04-23T10:00:00.000Z",
+        "motivoReprovacao": "aguardando"
+      },
+      "id": 6
+    },
+    {
+      "endereco": {
+        "logradouro": "rua azul",
+        "numero": 7,
+        "cep": "82820000",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "xx"
+      },
+      "nome": "abc",
+      "email": "bb@aaa",
+      "cpf": 36363363636,
+      "telefone": 41999999999,
+      "salario": 123,
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2022-12-18T21:07:52.872Z",
+        "motivoReprovacao": "aguardando"
+      },
+      "id": 7
+    },
+    {
+      "endereco": {
+        "logradouro": "rua preta",
+        "numero": 1,
+        "cep": "82820000",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "xx"
+      },
+      "nome": "mmm",
+      "email": "mm@mm",
+      "cpf": 14447471213,
+      "telefone": 41999999999,
+      "salario": 8500,
+      "status": false,
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2022-12-18T21:17:10.175Z",
+        "motivoReprovacao": "aguardando"
+      },
+      "id": 8
+    },
+    {
+      "endereco": {
+        "logradouro": "Rua Adelino Alexandrino Marquezini",
+        "numero": 180,
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "xx"
+      },
+      "email": "sss@nnn",
+      "cpf": 12587451214,
+      "telefone": 41999999999,
+      "salario": 258,
+      "status": false,
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2022-12-18T22:33:27.346Z",
+        "motivoReprovacao": "aguardando"
+      },
+      "id": 9
     }
   ],
   "enderecos": [
@@ -91,6 +202,56 @@
       "cidade": "Curitiba",
       "estado": "PR",
       "complemento": "casa"
+    }
+  ],
+  "transferencias": [
+    {
+      "id": 1,
+      "valor": 35,
+      "destino": "1212-1",
+      "data": "2020-11-06T21:34:17.155Z"
+    },
+    {
+      "id": 2,
+      "valor": 40,
+      "destino": "1213-1",
+      "data": "2020-11-10T22:28:17.155Z"
+    },
+    {
+      "valor": 2800,
+      "destino": "5555-2",
+      "data": "2022-12-17T20:37:09.282Z",
+      "id": 3
+    },
+    {
+      "valor": 1280,
+      "destino": "28954-4",
+      "data": "2022-12-17T20:39:47.584Z",
+      "id": 4
+    },
+    {
+      "valor": 3500,
+      "destino": "12345-2",
+      "data": "2022-12-17T20:47:05.775Z",
+      "id": 5
+    },
+    {
+      "valor": 125,
+      "destino": "3333",
+      "data": "2022-12-17T21:16:29.811Z",
+      "id": 6
+    },
+    {
+      "valor": 200,
+      "destino": "12120-0",
+      "data": "2022-12-17T21:26:55.436Z",
+      "id": 7
+    },
+    {
+      "valor": 250,
+      "destino": "1103-2",
+      "data": "2021-04-23T10:00:00.000Z",
+      "id": 8
     }
   ]
 }
