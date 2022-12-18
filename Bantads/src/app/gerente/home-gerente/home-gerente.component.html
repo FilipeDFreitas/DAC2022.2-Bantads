@@ -81,13 +81,10 @@
               <td>{{cliente.nome}}</td>
               <td>{{cliente.cpf}}</td>
               <td>{{cliente.salario}}</td>
-              <td> <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <td> <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="aprovar(cliente)">
                 Aprovar
               </button></td>
-            
-              
-              
-              <td><button type="button" class="btn btn-danger" (click)="abrirModalRecusar(cliente)">Recusar</button></td>
+               <td><button type="button" class="btn btn-danger" (click)="abrirModalRecusar(cliente)">Recusar</button></td>
             
             </tr>
 

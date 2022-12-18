@@ -32,9 +32,24 @@ export class GerenteService {
 
 
   recusar(cliente: Cliente): Observable<Cliente> {
+
+    console.log(cliente.conta!.motivoReprovacao);
+      console.log("*******chegou no gerente");
+
     return this.httpClient.put<Cliente>
-      (this.BASE_URL + cliente.id, JSON.stringify(cliente.conta?.motivoReprovacao), this.httpOptions);
+      (this.BASE_URL + cliente.id, JSON.stringify(cliente), this.httpOptions);
   }
+
+  aprovar(cliente: Cliente): Observable<Cliente> {
+
+    console.log(cliente.conta!.motivoReprovacao);
+      console.log("*******chegou no gerente");
+
+    return this.httpClient.put<Cliente>
+      (this.BASE_URL + cliente.id, JSON.stringify(cliente), this.httpOptions);
+  }
+  
+  
 
 
 

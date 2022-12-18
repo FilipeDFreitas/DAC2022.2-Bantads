@@ -79,7 +79,7 @@ const routes: Routes = [
     component: HomeGerenteComponent,
       },
 
-      { path: 'gerente/modal-recusar', 
+      { path: 'gerente/modal-recusar/:id', 
       component: ModalRecusarClienteComponent,
         },
 

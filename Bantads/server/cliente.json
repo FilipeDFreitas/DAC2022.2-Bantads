@@ -154,7 +154,7 @@
             "id": 6,
             "nome": "cliente6lalalal",
             "email": "cliente6@gmail.com",
-            "cpf": 923268,
+            "cpf":  ,
             "telefone": 36665546,
             "salario": 6954,
             "status": true,
@@ -220,7 +220,7 @@
                 "dataCriacao": "undefined",
                 "limite": 2266,
                 "idGerente": "undefined",
-                "motivoReprovacao": "aprovada",
+                "motivoReprovacao": "aguardando",
                 "dataAprovOuReprov": "undefined",
                 "saldo": 9583
             }
@@ -248,7 +248,7 @@
                 "dataCriacao": "undefined",
                 "limite": 1010,
                 "idGerente": "undefined",
-                "motivoReprovacao": "aprovada",
+                "motivoReprovacao": "undefined",
                 "dataAprovOuReprov": "undefined",
                 "saldo": 988
             }

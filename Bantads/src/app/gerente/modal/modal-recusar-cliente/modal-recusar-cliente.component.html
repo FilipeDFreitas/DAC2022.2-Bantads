@@ -9,14 +9,16 @@
     <h5 class="modal-title" id="exampleModalLabel">Recusar</h5>
     </div>
       <div class="modal-body">
-        <form>
+        <form #formRecusar = "ngForm">
+          <div class="form-group" hidden>
+            <label for="recipient-name" class="col-form-label">{{cliente.id}} </label>
+          </div>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Nome: {{ cliente.nome }} </label>
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">Motivo:</label>
-            <input type="text" class="form-control" id="motivoReprovacao" name="motivoReprovacao" 
-            required>
+            <input type="text" class="form-control" id="nome" name="motivoReprovacao" [(ngModel)]="cliente.conta!.motivoReprovacao" #motivoReprovacao="ngModel" minlength="2" required> 
           </div>
         </form>
       </div>
@@ -25,11 +27,7 @@
         <button type="button" class="btn btn-outline-dark"
         (click)="recusar()">Recusar</button>
         </div>
-    
-    <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark"
-    (click)="activeModal.close()">Fechar</button>
-    </div>
+  
 
 
 <script src="../js/bootstrap.min.js"></script>

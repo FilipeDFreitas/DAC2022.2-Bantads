@@ -48,6 +48,46 @@ export class ListarTodosClientesComponent implements OnInit {
 
   }
 
+  buscarCpf(cpf: String): Cliente[] {
+    this.gerenteService.listarClientes().subscribe({
+      next: (data: Cliente[]) => {
+        if (data == null) {
+          this.clientes = [];
+        }
+        else {
+          let data1: Cliente[] = data.filter(cliente => cliente.status === true);
+          let data2: Cliente[] = data.filter(cliente => cliente.cpf!.toString() === cpf);
+          
+          this.clientes = data2;
+        }
+      }
+    });
+    
+    return this.clientes;
+    
+  }
+
+  buscarNome(nome: String): Cliente[] {
+    this.gerenteService.listarClientes().subscribe({
+      next: (data: Cliente[]) => {
+        if (data == null) {
+          this.clientes = [];
+        }
+        else {
+          let data1: Cliente[] = data.filter(cliente => cliente.status === true);
+          let data2: Cliente[] = data.filter(cliente => cliente.nome! === nome);
+          
+          this.clientes = data2;
+        }
+      }
+    });
+    
+    return this.clientes;
+    
+  }
+
+
+
 
 
   abrirModalAcessarCliente(cliente: Cliente) {

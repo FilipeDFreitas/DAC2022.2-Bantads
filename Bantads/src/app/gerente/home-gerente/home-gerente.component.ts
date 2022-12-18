@@ -4,6 +4,7 @@ import { Cliente, Endereco } from 'src/app/shared';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalRecusarClienteComponent } from '../modal/modal-recusar-cliente/modal-recusar-cliente.component';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,7 +17,8 @@ export class HomeGerenteComponent implements OnInit {
   clientes : Cliente[] = [];
 
   constructor( private gerenteService : GerenteService,
-                private modalService: NgbModal) { }
+                private modalService: NgbModal,
+                private router: Router) { }
 
   ngOnInit(): void {
     
@@ -34,7 +36,8 @@ export class HomeGerenteComponent implements OnInit {
             }
             else {
               let data1:Cliente[] = data.filter(cliente => cliente.status === false);
-              this.clientes = data1;
+              let data2:Cliente[] = data1.filter(cliente => cliente.conta?.motivoReprovacao === "aguardando");
+              this.clientes = data2;
               
               }
             }
@@ -43,6 +46,21 @@ export class HomeGerenteComponent implements OnInit {
 
       }
   
+  
+  aprovar(cliente: Cliente){
+
+   
+      cliente.conta!.motivoReprovacao = "aprovado";
+      cliente.status = true;
+      cliente.conta!.dataAprovOuReprov = new Date();
+      console.log(cliente.conta!.motivoReprovacao);
+      console.log("chegou no modal");
+      console.log(cliente.conta!.dataAprovOuReprov);
+      this.gerenteService.aprovar(cliente);
+      this.router.navigate(['/gerente/home']);
+      
+    
+  }
 
   abrirModalRecusar(cliente: Cliente) {
     const modalRef = this.modalService.open(ModalRecusarClienteComponent);
