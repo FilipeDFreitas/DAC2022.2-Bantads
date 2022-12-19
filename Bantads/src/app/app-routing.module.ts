@@ -59,6 +59,7 @@ const routes: Routes = [
     data: {
       role: 'CLIENTE'
     },
+
   },
   {
     path: 'clientes/transferir',
@@ -67,6 +68,7 @@ const routes: Routes = [
     data: {
       role: 'CLIENTE'
     },
+
   },
   {
     path: 'clientes/saldo',
@@ -134,16 +136,20 @@ const routes: Routes = [
       role: 'GERENTE'
     },
   },
-
+  
   {
     path: 'login',
     component: LoginComponent
   },
   ...LoginRoutes
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }
+
+
