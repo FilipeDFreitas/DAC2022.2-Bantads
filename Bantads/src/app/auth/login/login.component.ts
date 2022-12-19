@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClienteService } from 'src/app/cliente/services/cliente.service';
-import { Cliente, Endereco, Login } from 'src/app/shared';
+import { Cliente, Endereco, Login, Conta } from 'src/app/shared';
 import { LoginService } from '../services/login.service';
 
 @Component({
@@ -19,12 +19,21 @@ export class LoginComponent implements OnInit {
   loading: boolean = false;
   message!: string;
 
+  //cadastro
+  public endereco = new Endereco();
+  public estados: string[] = [
+    "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA",
+    "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"
+  ];
+  public conta = new Conta();
+  public idConta = 0;
+
   constructor(
     private loginService: LoginService,
     private clienteService: ClienteService, // parte do cadastro
     private router: Router,
     private route: ActivatedRoute) {}
-  
+
 
 
   ngOnInit(): void {
@@ -34,8 +43,8 @@ export class LoginComponent implements OnInit {
       });
     // Cadastro - Cria uma instância vazia, para não dar erro de referência
 
-    // com o prof, antes de fazer o json db > 
-    this.cliente = new Cliente(new Endereco());
+    // com o prof, antes de fazer o json db >
+    this.cliente = new Cliente(new Endereco()),(new Conta());
 
   }
 
@@ -75,12 +84,24 @@ export class LoginComponent implements OnInit {
   // - Se OK
   // . Chama o inserir do Service, this.pessoa está preenchida (binding)
   // . Redireciona para /pessoas
-  inserir(): void {
+  cadastrarCliente(): void {
     if (this.formCliente.form.valid) {
-      this.clienteService.inserir(this.cliente);
-      this.router.navigate(["/home"]);
+      this.cliente.endereco = this.endereco;
+      this.cliente.status = false;
+      this.cliente.conta = this.conta;
+      this.cliente.conta.dataAprovOuReprov = undefined;
+      this.cliente.conta.dataCriacao = new Date();
+      this.cliente.conta.idGerente = undefined;
+      this.cliente.conta.limite = ((this.cliente.salario!)/2);
+      this.cliente.conta.motivoReprovacao = "aguardando";
+      this.cliente.conta.numeroConta = this.idConta+1;
+      this.cliente.conta.saldo = 0;
+
+      this.clienteService.inserir(this.cliente).subscribe(cliente => {this.loading = false;
+      this.router.navigate([''])
+    });
+    this.formCliente.reset();
     }
   }
-
 
 }

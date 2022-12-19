@@ -27,6 +27,12 @@ export class ClienteService {
     return this.httpClient.get<Cliente>(this.BASE_URL + id,
       this.httpOptions);
   }
+
+  buscarPorEmail(email: string): Observable<Cliente> {
+    return this.httpClient.get<Cliente>(this.BASE_URL + email,
+      this.httpOptions);
+  }
+
   inserir(cliente: Cliente): Observable<Cliente> {
     return this.httpClient.post<Cliente>(this.BASE_URL,
       JSON.stringify(cliente),
