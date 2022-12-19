@@ -1,51 +1,76 @@
-    <!-- Cabeçalho da página -->
-    <header class="container-fluid bg-dark mb-5">
-      <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
+<!-- Cabeçalho da página -->
+<header class="container-fluid bg-dark mb-5">
+    <nav class="navbar navbar-expand-lg navbar-dark" role="navigation">
         <div *ngIf="usuarioLogado">
-        <!-- Menu do cliente -->
-        <li *ngIf="usuarioLogado.perfil==='CLIENTE'" class="nav-item">
-            <a class="navbar-brand" href="#" routerLink="/clientes">
-            <img src="../assets/simboloBancoInvertido.jpg" width="33" height="33" class="d-inline-block align-top" alt="Logo do sistema" />
-            <span class="text-white-50 h4 c-title">BANTADS</span>
-            </a>
-            <div class="container">
-                <ul class="navbar-nav text-white">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#" routerLink="/clientes">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" routerLink="clientes/cliente-editar">Alteração de Perfil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" routerLink="clientes/depositar">Depositar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" routerLink="clientes/saque">Saque</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" routerLink="clientes/transferir">Transferência</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" routerLink="clientes/saldo">Consulta de Saldo atual</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" routerLink="clientes/extrato">Consulta de extrato</a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-        <!-- Menu do administrador -->
+            <!-- Menu do cliente -->
+            <li *ngIf="usuarioLogado.perfil==='CLIENTE'" class="nav-item">
+                <a class="navbar-brand" href="#" routerLink="/clientes">
+                    <img src="../assets/simboloBancoInvertido.jpg" width="33" height="33"
+                        class="d-inline-block align-top" alt="Logo do sistema" />
+                    <span class="text-white-50 h4 c-title">BANTADS</span>
+                </a>
+                <div class="container">
+                    <ul class="navbar-nav text-white">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" routerLink="/clientes">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" routerLink="clientes/cliente-editar">Alteração de Perfil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" routerLink="clientes/depositar">Depositar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" routerLink="clientes/saque">Saque</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" routerLink="clientes/transferir">Transferência</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" routerLink="clientes/saldo">Consulta de Saldo atual</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" routerLink="clientes/extrato">Consulta de extrato</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <!-- Menu do administrador -->
 
-        <!-- Menu do gerente -->
-        </div>
-        <div *ngIf="usuarioLogado" class="form-inline">
-          <a class="btn btn-sm btn-outline-danger text-white my-2 my-sm-0"
-            href="#" (click)="logout()">
-                <i class="fas fa-door-open"></i>
-                Sair
-          </a>
-        </div>
-      </nav>
-    </header>
-    <router-outlet></router-outlet>
+            <!-- Menu do gerente -->
+            <li *ngIf="usuarioLogado.perfil==='GERENTE'" class="nav-item">
 
+                <div class="container">
+                    <ul class="navbar-nav text-white">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" [routerLink]="['/gerente/home']">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" [routerLink]="['/gerente/consultarCliente']">Consultar
+                                Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" [routerLink]="['/gerente/listarTodosClientes']">Consultar Todos
+                                os
+                                Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" [routerLink]="['/gerente/top5']">TOP 5</a>
+                        </li>
+
+                    </ul>
+                   
+                </div>
+               
+
+                <div class="form-inline">
+                    <a href="../index.html" class="btn btn-sm btn-outline-danger text-white my-2 my-sm-0">
+                        <i class="fas fa-door-open"></i>
+                        Sair
+                    </a>
+                </div>
+        </div>
+    </nav>
+
+</header>
+<router-outlet></router-outlet>
