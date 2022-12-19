@@ -37,9 +37,11 @@
             </span>
           </div>
           <div class="form-group">
-            <input type="number" class="form-control" name="cpf" placeholder="CPF" step="1"
-              [(ngModel)]="cliente.cpf"
-              #cpf="ngModel" minlength="11" readonly/>
+            <input type="text" class="form-control" name="cpf" placeholder="CPF" step="1"
+                    [(ngModel)]="cliente.cpf"
+                    #cpf="ngModel"
+                    minlength="11"
+                    mask="000.000.000-00" readonly/>
           </div>
       </div>
         <div class="input-group mb-3">
@@ -67,8 +69,10 @@
               <i class="fas fa-mobile-alt"></i>
             </span>
           </div>
-          <input type="number" class="form-control" name="telefone" placeholder="Telefone (com DDD)"
-            [(ngModel)]="cliente.telefone" #telefone="ngModel" />
+          <input type="text" class="form-control" name="telefone" placeholder="Telefone (com DDD)"
+                  [(ngModel)]="cliente.telefone"
+                  mask="(00) 0 0000-0000 "
+                  #telefone="ngModel" />
 
           <div *ngIf="telefone.errors && (telefone.dirty || telefone.touched)" class="alert alert-danger">
 
@@ -84,9 +88,11 @@
             <i class="fas fa-money-bill"></i>
           </span>
         </div>
-        <input type="number" class="form-control" name="salario" placeholder="Salário"
-          [(ngModel)]="cliente.salario"
-          #salario="ngModel" />
+        <input type="text" class="form-control" name="salario" placeholder="Salário"
+              [(ngModel)]="cliente.salario"
+              #salario="ngModel"
+              prefix = "R$"
+              mask="separator.1" />
 
         <div *ngIf="salario.errors && (salario.dirty || salario.touched)" class="alert alert-danger">
 
@@ -104,10 +110,10 @@
         </div>
 
         <input type="text" class="form-control" id="cep" name="cep" placeholder="00000-000"
-          [(ngModel)]="cliente.endereco!.cep"
-          #cep="ngModel"
-          mask="00000-000"
-          numerico required>
+              [(ngModel)]="cliente.endereco!.cep"
+              #cep="ngModel"
+              mask="00000-000"
+              required>
 
         <div *ngIf="cep.errors && (cep.dirty || cep.touched)" class="alert alert-danger">
           <div [hidden]="!cep.errors['required']">
