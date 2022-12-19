@@ -21,6 +21,7 @@ export class TransferenciaService {
    adicionar(transferencia: Transferencia) : Observable<Transferencia>{
     this.hidratar(transferencia);
     this.tipo(transferencia);
+  
 
     return this.httpClient.post<Transferencia>(this.url, transferencia);
    }
@@ -35,4 +36,5 @@ export class TransferenciaService {
    private tipo(transferencia: Transferencia){
     transferencia.tipo= "transferencia";
    }
+
 }

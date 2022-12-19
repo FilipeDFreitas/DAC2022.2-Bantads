@@ -172,7 +172,6 @@
       "status": false,
       "conta": {
         "numeroConta": 1,
-
         "dataCriacao": "2022-12-18T23:44:01.813Z",
         "limite": 3900,
         "motivoReprovacao": "aguardando",
@@ -180,7 +179,6 @@
         "gerente": {
           "nome": "Carlos Eduardo"
         }
-
       },
       "id": 8
     },
@@ -301,6 +299,53 @@
       "data": "2022-12-19T03:32:07.533Z",
       "tipo": "deposito",
       "id": 14
+    },
+    {
+      "valor": 999,
+      "data": "2022-12-19T04:00:41.975Z",
+      "tipo": "deposito",
+      "id": 15
+    },
+    {
+      "valor": 85,
+      "destino": 0,
+      "data": "2022-12-19T04:00:59.001Z",
+      "tipo": "transferencia",
+      "id": 16
+    },
+    {
+      "valor": 33,
+      "data": "2022-12-19T04:05:00.159Z",
+      "tipo": "saque",
+      "id": 17
+    },
+    {
+      "valor": 456,
+      "data": "2022-12-19T04:19:44.919Z",
+      "tipo": "saque",
+      "destino": "1",
+      "id": 18
+    },
+    {
+      "valor": 111,
+      "data": "2022-12-19T04:26:34.640Z",
+      "tipo": "deposito",
+      "destino": "1",
+      "id": 19
+    },
+    {
+      "valor": 88,
+      "data": "2022-12-19T04:26:46.302Z",
+      "tipo": "saque",
+      "destino": "1",
+      "id": 20
+    },
+    {
+      "valor": 50,
+      "destino": "8",
+      "data": "2022-12-19T04:27:18.368Z",
+      "tipo": "transferencia",
+      "id": 21
     }
   ]
 }

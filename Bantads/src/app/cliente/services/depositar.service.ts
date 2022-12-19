@@ -21,6 +21,7 @@ export class DepositarService {
    adicionar(depositar: Depositar) : Observable<Depositar>{
     this.hidratar(depositar);
     this.tipo(depositar);
+    this.destino(depositar);
 
     return this.httpClient.post<Depositar>(this.url, depositar);
    }
@@ -35,6 +36,10 @@ export class DepositarService {
 
    private tipo(depositar: Depositar){
     depositar.tipo= "deposito";
+   }
+
+   private destino(depositar: Depositar){
+    depositar.destino= "1";
    }
 
 }
