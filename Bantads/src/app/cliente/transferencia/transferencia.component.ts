@@ -20,15 +20,15 @@ export class TransferenciaComponent {
 
 
   transferir(){
-    console.log('Solicitada nova transferência');
+
     const valorEmitir: Transferencia = {valor : this.valor, destino : this.destino};
 
     this.transferenciaService.adicionar(valorEmitir).subscribe(
       (resultado) => {
-        console.log(resultado);
+
         this.limparCampos();
       },
-      (error) => console.error(error));
+      (error) => error(error));
     this.limparCampos();
   }
 

@@ -103,8 +103,13 @@
       "salario": 1520,
       "conta": {
         "numeroConta": 1,
-        "dataCriacao": "2021-04-23T10:00:00.000Z",
-        "motivoReprovacao": "aguardando"
+        "dataCriacao": "2022-12-18T23:36:20.405Z",
+        "limite": 3900,
+        "motivoReprovacao": "aguardando",
+        "saldo": 0,
+        "gerente": {
+          "nome": "Carlos Eduardo"
+        }
       },
       "id": 5
     },
@@ -167,9 +172,15 @@
       "status": false,
       "conta": {
         "numeroConta": 1,
-        "dataCriacao": "2022-12-18T21:17:10.175Z",
-        "motivoReprovacao": "asasasasfggjhj",
-        "dataAprovOuReprov": "2022-12-19T00:21:24.471Z"
+
+        "dataCriacao": "2022-12-18T23:44:01.813Z",
+        "limite": 3900,
+        "motivoReprovacao": "aguardando",
+        "saldo": 0,
+        "gerente": {
+          "nome": "Carlos Eduardo"
+        }
+
       },
       "id": 8
     },
@@ -253,6 +264,43 @@
       "destino": "1103-2",
       "data": "2021-04-23T10:00:00.000Z",
       "id": 8
+    },
+    {
+      "valor": 44525,
+      "destino": "12120-0",
+      "data": "2021-04-23T10:00:00.000Z",
+      "id": 9
+    },
+    {
+      "valor": 100,
+      "destino": "1",
+      "data": "2021-04-23T10:00:00.000Z",
+      "id": 10
+    },
+    {
+      "valor": 150,
+      "destino": 0,
+      "data": "2021-04-23T10:00:00.000Z",
+      "id": 11
+    },
+    {
+      "valor": 1259,
+      "destino": "785",
+      "data": "2022-12-19T03:09:11.387Z",
+      "id": 12
+    },
+    {
+      "valor": 8900,
+      "destino": "777",
+      "data": "2022-12-19T03:28:43.488Z",
+      "tipo": "transferencia",
+      "id": 13
+    },
+    {
+      "valor": 450,
+      "data": "2022-12-19T03:32:07.533Z",
+      "tipo": "deposito",
+      "id": 14
     }
   ]
 }

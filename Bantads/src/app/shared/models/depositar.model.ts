@@ -1,6 +1,6 @@
 import { Cliente } from "./cliente.model";
 
-export class Transferencia {
+export class Depositar {
   constructor(
     public cliente?: Cliente,
     public id?: number,
