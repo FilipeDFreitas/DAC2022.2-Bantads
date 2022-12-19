@@ -21,7 +21,6 @@
       "perfil": "CLIENTE"
     }
   ],
-
   "clientes": [
     {
       "id": 1,
@@ -32,10 +31,178 @@
       "salario": 4000.5,
       "status": true,
       "conta": 1,
-      "endereco_id": 1 
+      "endereco_id": 1
+    },
+    {
+      "endereco": {
+        "cep": "82860490",
+        "logradouro": "Rua Adelino Alexandrino Marquezini",
+        "numero": 180,
+        "complemento": "180",
+        "cidade": "Curitiba",
+        "estado": "PR"
+      },
+      "nome": "aaa",
+      "email": "aaa@aaa",
+      "cpf": 11111111111,
+      "telefone": 41999999999,
+      "salario": 5000,
+      "id": 2
+    },
+    {
+      "endereco": {
+        "logradouro": "Rua Adelino Alexandrino Marquezini",
+        "numero": 180,
+        "cep": "82860490",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "180"
+      },
+      "nome": "CLAUDIA BASTCHEN",
+      "email": "clau.eng.mec@gmail.com",
+      "cpf": 21536,
+      "telefone": 41996529582,
+      "salario": 1000,
+      "conta": {},
+      "id": 3
+    },
+    {
+      "endereco": {
+        "logradouro": "Rua Adelino Alexandrino Marquezini",
+        "numero": 180,
+        "cep": "82820000",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "xx"
+      },
+      "nome": "eee",
+      "email": "ee@aaa",
+      "cpf": 5824785241,
+      "telefone": 41999999999,
+      "salario": 25000,
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2021-04-23T10:00:00.000Z",
+        "motivoReprovacao": "aguardando"
+      },
+      "id": 4
+    },
+    {
+      "endereco": {
+        "logradouro": "rua amarela",
+        "numero": 123,
+        "cep": "82820000",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "xx"
+      },
+      "nome": "ppp",
+      "email": "pp@aaa",
+      "cpf": 12345693230,
+      "telefone": 41999999999,
+      "salario": 1520,
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2022-12-18T23:36:20.405Z",
+        "limite": 3900,
+        "motivoReprovacao": "aguardando",
+        "saldo": 0,
+        "gerente": {
+          "nome": "Carlos Eduardo"
+        }
+      },
+      "id": 5
+    },
+    {
+      "endereco": {
+        "logradouro": "rua verde",
+        "numero": 3,
+        "cep": "82820000",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "xx"
+      },
+      "nome": "qqq",
+      "email": "qq@aaa",
+      "cpf": 14258575956,
+      "telefone": 41999999999,
+      "salario": 10000,
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2021-04-23T10:00:00.000Z",
+        "motivoReprovacao": "aguardando"
+      },
+      "id": 6
+    },
+    {
+      "endereco": {
+        "logradouro": "rua azul",
+        "numero": 7,
+        "cep": "82820000",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "xx"
+      },
+      "nome": "abc",
+      "email": "bb@aaa",
+      "cpf": 36363363636,
+      "telefone": 41999999999,
+      "salario": 123,
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2022-12-18T21:07:52.872Z",
+        "motivoReprovacao": "aguardando"
+      },
+      "id": 7
+    },
+    {
+      "endereco": {
+        "logradouro": "rua preta",
+        "numero": 1,
+        "cep": "82820000",
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "xx"
+      },
+      "nome": "mmm",
+      "email": "mm@mm",
+      "cpf": 14447471213,
+      "telefone": 41999999999,
+      "salario": 8500,
+      "status": false,
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2022-12-18T23:44:01.813Z",
+        "limite": 3900,
+        "motivoReprovacao": "aguardando",
+        "saldo": 0,
+        "gerente": {
+          "nome": "Carlos Eduardo"
+        }
+      },
+      "id": 8
+    },
+    {
+      "endereco": {
+        "logradouro": "Rua Adelino Alexandrino Marquezini",
+        "numero": 180,
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "xx"
+      },
+      "email": "sss@nnn",
+      "cpf": 12587451214,
+      "telefone": 41999999999,
+      "salario": 258,
+      "status": false,
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2022-12-18T22:33:27.346Z",
+        "motivoReprovacao": "aguardando"
+      },
+      "id": 9
     }
   ],
-
   "enderecos": [
     {
       "id": 1,
@@ -45,6 +212,140 @@
       "cidade": "Curitiba",
       "estado": "PR",
       "complemento": "casa"
+    }
+  ],
+  "transferencias": [
+    {
+      "id": 1,
+      "valor": 35,
+      "destino": "1212-1",
+      "data": "2020-11-06T21:34:17.155Z"
+    },
+    {
+      "id": 2,
+      "valor": 40,
+      "destino": "1213-1",
+      "data": "2020-11-10T22:28:17.155Z"
+    },
+    {
+      "valor": 2800,
+      "destino": "5555-2",
+      "data": "2022-12-17T20:37:09.282Z",
+      "id": 3
+    },
+    {
+      "valor": 1280,
+      "destino": "28954-4",
+      "data": "2022-12-17T20:39:47.584Z",
+      "id": 4
+    },
+    {
+      "valor": 3500,
+      "destino": "12345-2",
+      "data": "2022-12-17T20:47:05.775Z",
+      "id": 5
+    },
+    {
+      "valor": 125,
+      "destino": "3333",
+      "data": "2022-12-17T21:16:29.811Z",
+      "id": 6
+    },
+    {
+      "valor": 200,
+      "destino": "12120-0",
+      "data": "2022-12-17T21:26:55.436Z",
+      "id": 7
+    },
+    {
+      "valor": 250,
+      "destino": "1103-2",
+      "data": "2021-04-23T10:00:00.000Z",
+      "id": 8
+    },
+    {
+      "valor": 44525,
+      "destino": "12120-0",
+      "data": "2021-04-23T10:00:00.000Z",
+      "id": 9
+    },
+    {
+      "valor": 100,
+      "destino": "1",
+      "data": "2021-04-23T10:00:00.000Z",
+      "id": 10
+    },
+    {
+      "valor": 150,
+      "destino": 0,
+      "data": "2021-04-23T10:00:00.000Z",
+      "id": 11
+    },
+    {
+      "valor": 1259,
+      "destino": "785",
+      "data": "2022-12-19T03:09:11.387Z",
+      "id": 12
+    },
+    {
+      "valor": 8900,
+      "destino": "777",
+      "data": "2022-12-19T03:28:43.488Z",
+      "tipo": "transferencia",
+      "id": 13
+    },
+    {
+      "valor": 450,
+      "data": "2022-12-19T03:32:07.533Z",
+      "tipo": "deposito",
+      "id": 14
+    },
+    {
+      "valor": 999,
+      "data": "2022-12-19T04:00:41.975Z",
+      "tipo": "deposito",
+      "id": 15
+    },
+    {
+      "valor": 85,
+      "destino": 0,
+      "data": "2022-12-19T04:00:59.001Z",
+      "tipo": "transferencia",
+      "id": 16
+    },
+    {
+      "valor": 33,
+      "data": "2022-12-19T04:05:00.159Z",
+      "tipo": "saque",
+      "id": 17
+    },
+    {
+      "valor": 456,
+      "data": "2022-12-19T04:19:44.919Z",
+      "tipo": "saque",
+      "destino": "1",
+      "id": 18
+    },
+    {
+      "valor": 111,
+      "data": "2022-12-19T04:26:34.640Z",
+      "tipo": "deposito",
+      "destino": "1",
+      "id": 19
+    },
+    {
+      "valor": 88,
+      "data": "2022-12-19T04:26:46.302Z",
+      "tipo": "saque",
+      "destino": "1",
+      "id": 20
+    },
+    {
+      "valor": 50,
+      "destino": "8",
+      "data": "2022-12-19T04:27:18.368Z",
+      "tipo": "transferencia",
+      "id": 21
     }
   ]
 }

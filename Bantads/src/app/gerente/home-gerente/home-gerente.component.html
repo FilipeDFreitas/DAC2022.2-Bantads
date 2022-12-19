@@ -1,0 +1,61 @@
+
+<html lang="pt-BR">
+ 
+  <body>
+
+    
+
+  
+    <!-- Corpo da página -->
+    <main>
+    <div class="container">
+      <h2 class="mb-4">
+        Aprovação de Autocadastro
+      </h2>
+
+     
+
+        <!-- Tabela de atendimentos -->
+        <table class="table table-hover">
+        
+          <thead class="c-thead">
+            <tr class="text-center">
+              
+              <th scope="col">Nome</th>
+              <th scope="col">CPF</th>
+              <th scope="col">Salário</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cliente of clientes" class="text-center">
+              
+              <td>{{cliente.nome}}</td>
+              <td>{{cliente.cpf}}</td>
+              <td>{{cliente.salario}}</td>
+              <td> <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="aprovar(cliente)">
+                Aprovar
+              </button></td>
+               <td><button type="button" class="btn btn-danger" (click)="abrirModalRecusar(cliente)">Recusar</button></td>
+            
+            </tr>
+
+
+
+           
+         
+          </tbody>
+        </table>
+        <p *ngIf ="clientes.length==0"> Nenhuma conta pendente de aprovação</p>
+
+
+      </div>
+
+
+    </main>
+
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>

@@ -19,20 +19,20 @@ export class LoginService {
   }
   public set usuarioLogado(usuario: Usuario) {
     localStorage[LS_CHAVE] = JSON.stringify(usuario);
-  } 
+  }
   logout() {
     delete localStorage[LS_CHAVE];
   }
   login(login: Login): Observable<Usuario | null> {
-    let usu = new Usuario(1, "Teste-Cliente", 
+    let usu = new Usuario(1, "Teste-Cliente",
       login.email, login.senha, "CLIENTE");
     if (login.email == login.senha) {
       if (login.email == "admin") {
-        usu = new Usuario(1, "Teste-Admin", 
+        usu = new Usuario(1, "Teste-Admin",
         login.email, login.senha, "ADMIN");
       }
       else if (login.email == "gerente") {
-        usu = new Usuario(1, "Teste-Gerente", 
+        usu = new Usuario(1, "Teste-Gerente",
          login.email, login.senha, "GERENTE");
       }
       return of(usu);
@@ -41,4 +41,5 @@ export class LoginService {
     return of(null);
     }
   }
+
 }

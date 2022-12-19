@@ -1,0 +1,256 @@
+{
+  "clientes": [
+    {
+      "endereco": {
+        "id": 1,
+        "logradouro": "Rua Cli1",
+        "numero": 1,
+        "cep": 1111111,
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "casa"
+      },
+      "id": 1,
+      "nome": "cliente1",
+      "email": "cliente1@gmail.com",
+      "cpf": 9236548,
+      "telefone": 366658952,
+      "salario": 2658,
+      "status": true,
+      "conta": {
+        "idCliente": 1,
+        "numeroConta": 2965,
+        "dataCriacao": "undefined",
+        "limite": 250,
+        "idGerente": "undefined",
+        "motivoReprovacao": "aprovada",
+        "dataAprovOuReprov": "undefined",
+        "saldo": 98
+      }
+    },
+    {
+      "endereco": {
+        "id": 2,
+        "logradouro": "Rua Cli2",
+        "numero": 2,
+        "cep": 2222222,
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "casa"
+      },
+      "id": 2,
+      "nome": "cliente2",
+      "email": "cliente2@gmail.com",
+      "cpf": 9236541,
+      "telefone": 366658952,
+      "salario": 265,
+      "status": false,
+      "conta": {
+        "idCliente": 2,
+        "numeroConta": 2365,
+        "dataCriacao": "undefined",
+        "limite": 200,
+        "idGerente": "undefined",
+        "motivoReprovacao": "naprovada",
+        "dataAprovOuReprov": "undefined",
+        "saldo": 50
+      }
+    },
+    {
+      "endereco": {
+        "id": 3,
+        "logradouro": "Rua Cli3",
+        "numero": 3,
+        "cep": 333333,
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "casa"
+      },
+      "id": 3,
+      "nome": "cliente3",
+      "email": "cliente3@gmail.com",
+      "cpf": 923636,
+      "telefone": 366625652,
+      "salario": 3659,
+      "status": false,
+      "conta": {
+        "idCliente": 3,
+        "numeroConta": 2933,
+        "dataCriacao": "undefined",
+        "limite": 265,
+        "idGerente": "undefined",
+        "motivoReprovacao": "teste",
+        "dataAprovOuReprov": "2022-12-18T23:02:15.119Z",
+        "saldo": 98
+      }
+    },
+    {
+      "endereco": {
+        "id": 4,
+        "logradouro": "Rua Cli4",
+        "numero": 4,
+        "cep": 1556911,
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "casa"
+      },
+      "id": 4,
+      "nome": "cliente4",
+      "email": "cliente4@gmail.com",
+      "cpf": 9236546,
+      "telefone": 3666656552,
+      "salario": 2695,
+      "status": false,
+      "conta": {
+        "idCliente": 4,
+        "numeroConta": 2582,
+        "dataCriacao": "undefined",
+        "limite": 269,
+        "idGerente": "undefined",
+        "motivoReprovacao": "teste",
+        "dataAprovOuReprov": "2022-12-18T23:00:04.678Z",
+        "saldo": 568
+      }
+    },
+    {
+      "endereco": {
+        "id": 5,
+        "logradouro": "Rua Cli5",
+        "numero": 5,
+        "cep": 65659,
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "casa"
+      },
+      "id": 5,
+      "nome": "cliente1",
+      "email": "cliente1@gmail.com",
+      "cpf": 926595,
+      "telefone": 363265,
+      "salario": 6502,
+      "status": false,
+      "conta": {
+        "idCliente": 5,
+        "numeroConta": 29659,
+        "dataCriacao": "undefined",
+        "limite": 633,
+        "idGerente": "undefined",
+        "motivoReprovacao": "aasasasasas",
+        "dataAprovOuReprov": "2022-12-18T23:05:31.979Z",
+        "saldo": 365
+      }
+    },
+    {
+      "endereco": {
+        "id": 6,
+        "logradouro": "Rua Cli6",
+        "numero": 6,
+        "cep": 66666,
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "casa"
+      },
+      "id": 6,
+      "nome": "cliente6lalalal",
+      "email": "cliente6@gmail.com",
+      "cpf": 8965856,
+      "telefone": 36665546,
+      "salario": 6954,
+      "status": true,
+      "conta": {
+        "idCliente": 6,
+        "numeroConta": 6592,
+        "dataCriacao": "undefined",
+        "limite": 699,
+        "idGerente": "undefined",
+        "motivoReprovacao": "aprovada",
+        "dataAprovOuReprov": "undefined",
+        "saldo": 450
+      }
+    },
+    {
+      "endereco": {
+        "id": 7,
+        "logradouro": "Rua Cli7",
+        "numero": 7,
+        "cep": 7,
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "casa"
+      },
+      "id": 7,
+      "nome": "marcos",
+      "email": "cliente7@gmail.com",
+      "cpf": 9236548,
+      "telefone": 366658952,
+      "salario": 6253,
+      "status": true,
+      "conta": {
+        "idCliente": 7,
+        "numeroConta": 7777,
+        "dataCriacao": "undefined",
+        "limite": 659,
+        "idGerente": "undefined",
+        "motivoReprovacao": "aprovada",
+        "dataAprovOuReprov": "undefined",
+        "saldo": 8888
+      }
+    },
+    {
+      "endereco": {
+        "id": 8,
+        "logradouro": "Rua Cli8",
+        "numero": 8,
+        "cep": 888888,
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "casa"
+      },
+      "id": 8,
+      "nome": "cliente8",
+      "email": "cliente8@gmail.com",
+      "cpf": 92368888,
+      "telefone": 366658952,
+      "salario": 9852,
+      "status": true,
+      "conta": {
+        "idCliente": 8,
+        "numeroConta": 5445,
+        "dataCriacao": "undefined",
+        "limite": 2266,
+        "idGerente": "undefined",
+        "motivoReprovacao": "aprovado",
+        "dataAprovOuReprov": "2022-12-18T23:44:25.789Z",
+        "saldo": 9583
+      }
+    },
+    {
+      "endereco": {
+        "id": 10,
+        "logradouro": "Rua Cli10",
+        "numero": 10,
+        "cep": 111110,
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "casa"
+      },
+      "id": 10,
+      "nome": "cliente10",
+      "email": "cliente10@gmail.com",
+      "cpf": 92365480,
+      "telefone": 366518952,
+      "salario": 10,
+      "status": true,
+      "conta": {
+        "idCliente": 10,
+        "numeroConta": 101,
+        "dataCriacao": "undefined",
+        "limite": 1010,
+        "idGerente": "undefined",
+        "motivoReprovacao": "aprovado",
+        "dataAprovOuReprov": "2022-12-18T23:44:35.189Z",
+        "saldo": 988
+      }
+    }
+  ]
+}

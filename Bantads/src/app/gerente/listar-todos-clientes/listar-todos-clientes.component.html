@@ -1,0 +1,91 @@
+ 
+<html lang="pt-BR">
+ 
+<body>
+
+  
+
+ 
+  <!-- Corpo da página -->
+  <main>
+  <div class="container">
+    <h2 class="mb-4">
+     Listar todos os Clientes
+    </h2>
+
+    <div class="container">
+      <h2 class="mb-4">
+          Busque o cliente pelo CPF
+      </h2>
+
+      <form #buscaCpfForm ="ngForm" class="register-form">
+          <div class="mt-3">
+              <div class="form-inline p-2">
+                  <input #cpf placeholder="CPF" name="cpf" type="text"/>
+                  <button type="submit" (click)="buscarCpf(cpf.value)">
+                      Buscar </button>
+              </div>
+          </div>
+      </form>
+
+  </div>
+  
+  <div class="container">
+    <h2 class="mb-4">
+        Busque o cliente pelo Nome
+    </h2>
+
+   <form #buscaCpfForm ="ngForm" class="register-form">
+        <div class="mt-3">
+            <div class="form-inline p-2">
+                <input #nome placeholder="NOME" name="nome" type="text"/>
+                <button type="submit" (click)="buscarNome(nome.value)">
+                    Buscar </button>
+            </div>
+        </div>
+    </form> 
+
+</div>
+
+      <!-- Tabela de atendimentos -->
+      <table class="table table-hover">
+      
+        <thead class="c-thead">
+          <tr class="text-center">
+            
+            <th scope="col">Nome</th>
+            <th scope="col">CPF</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Saldo</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cliente of clientes" (click)="abrirModalAcessarCliente(cliente)" class="text-center">
+            
+            <td>{{cliente.nome}}</td>
+            <td>{{cliente.cpf}}</td>
+            <td>{{cliente.endereco?.cidade}}</td>
+            <td>{{cliente.endereco?.estado}}</td>
+            <td>{{cliente.conta?.saldo}}</td>
+                    
+          </tr>
+
+
+         
+       
+        </tbody>
+      </table>
+      <p *ngIf ="clientes.length==0"> Nenhuma conta pendente de aprovação</p>
+
+
+    </div>
+
+
+  </main>
+
+  <script src="../js/bootstrap.min.js"></script>
+  <script src="../js/scripts.js"></script>
+</body>
+</html>
