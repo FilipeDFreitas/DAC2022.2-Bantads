@@ -7,6 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ClienteService } from 'src/app/cliente/services/cliente.service';
 import { Conta } from 'src/app/shared';
 import { GerenteService } from '../../services/gerente.service';
+import { Usuario } from 'src/app/shared';
 
 @Component({
   selector: 'app-modal-recusar-cliente',
@@ -17,6 +18,7 @@ export class ModalRecusarClienteComponent implements OnInit {
   @ViewChild ('formRecusar') formRecusar!: NgForm;
   cliente!: Cliente;
   loading!: boolean;
+  
 
  
 
