@@ -1,7 +1,7 @@
+import { Saque } from 'src/app/shared/models/saque.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Saque } from 'src/app/shared/models/saque.model';
 
 @Injectable({
   providedIn: 'root'

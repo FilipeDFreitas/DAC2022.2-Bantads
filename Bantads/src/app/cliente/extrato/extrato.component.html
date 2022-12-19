@@ -37,7 +37,7 @@
               <tr class="c-clickable text-center" *ngFor="let transferencia of transferencias">
                 <td> {{ transferencia.data | date : 'short' : '' : 'pt-BR'}} </td>
                 <td>{{ transferencia.tipo }}</td>
-                <td>{{ transferencia.valor | currency : 'BRL'}}</td>
+                <td [style]="getColor(transferencia.tipo)">{{ transferencia.valor | currency : 'BRL'}}</td>
                 <td>1</td>
                 <td>{{ transferencia.destino }}</td>
               </tr>
