@@ -20,6 +20,7 @@ export class TransferenciaService {
 
    adicionar(transferencia: Transferencia) : Observable<Transferencia>{
     this.hidratar(transferencia);
+    this.tipo(transferencia);
 
     return this.httpClient.post<Transferencia>(this.url, transferencia);
    }
@@ -29,7 +30,9 @@ export class TransferenciaService {
    }
 
    private hidratar(transferencia: Transferencia){
-    transferencia.data = new Date('2021-04-23T10:00:00.000Z');
+    transferencia.data = new Date();
    }
-
+   private tipo(transferencia: Transferencia){
+    transferencia.tipo= "transferencia";
+   }
 }
