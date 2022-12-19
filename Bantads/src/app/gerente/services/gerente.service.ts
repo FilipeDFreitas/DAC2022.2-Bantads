@@ -16,7 +16,7 @@ import { Observable } from 'rxjs';
 })
 export class GerenteService {
 
-  BASE_URL = "http://localhost:3000/clientes/";
+  BASE_URL = "http://localhost:3000/db/";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
