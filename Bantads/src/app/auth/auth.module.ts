@@ -6,14 +6,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './login/login.component';
 //import { NumericoDirective } from '../shared/directives/numerico.directive';
 //import { MeuPipePipe } from '../shared/pipes/meu-pipe.pipe';
-//import { NgxMaskModule, IConfig } from 'ngx-mask'
-//export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    //NumericoDirective,
+    //MinimoValidatorDirective
     //MeuPipePipe
   ],
   imports: [
@@ -21,7 +21,7 @@ import { LoginComponent } from './login/login.component';
     FormsModule,
     RouterModule,
     NgbModule,
-    //NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot()
   ],
   providers: [
     LoginComponent,
