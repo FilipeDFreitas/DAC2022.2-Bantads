@@ -1,5 +1,5 @@
 import { Observable } from 'rxjs';
-import { Transferencia } from '../../shared/models/Transferencia.model';
+import { Transferencia } from 'src/app/shared/models/transferencia.model';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
