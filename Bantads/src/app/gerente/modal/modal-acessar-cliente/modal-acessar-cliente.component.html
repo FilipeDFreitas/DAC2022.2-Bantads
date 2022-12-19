@@ -1,0 +1,61 @@
+
+
+<div class="modal-header">
+   
+    <button type="button" class="close" aria-label="Fechar"
+    (click)="activeModal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    <h5 class="modal-title" id="exampleModalLabel">Dados do Cliente</h5>
+    </div>
+      <div class="modal-body">
+        <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Nome: {{ cliente.nome }} </label>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">E-mail: {{ cliente.email }} </label>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">CPF: {{ cliente.cpf}} </label>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Telefone: {{ cliente.telefone }} </label>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Salário: {{ cliente.salario }} </label>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Status: {{ cliente.status }} </label>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Conta: {{ cliente.conta?.numeroConta }} </label>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Data de Criação: {{ cliente.conta?.dataCriacao }} </label>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Limite: {{ cliente.conta?.limite}} </label>
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="col-form-label">Saldo: {{ cliente.conta?.saldo }} </label>
+          </div>
+         
+      </div>
+
+
+    
+    <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark"
+    (click)="activeModal.close()">Fechar</button>
+    </div>
+
+
+
+
+
+
+
+
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/scripts.js"></script> 
+
