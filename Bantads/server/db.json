@@ -169,16 +169,17 @@
       "cpf": 14447471213,
       "telefone": 41999999999,
       "salario": 8500,
-      "status": false,
+      "status": true,
       "conta": {
         "numeroConta": 1,
         "dataCriacao": "2022-12-18T23:44:01.813Z",
         "limite": 3900,
-        "motivoReprovacao": "aguardando",
+        "motivoReprovacao": "aprovado",
         "saldo": 0,
         "gerente": {
           "nome": "Carlos Eduardo"
-        }
+        },
+        "dataAprovOuReprov": "2022-12-19T23:11:32.500Z"
       },
       "id": 8
     },
@@ -198,9 +199,54 @@
       "conta": {
         "numeroConta": 1,
         "dataCriacao": "2022-12-18T22:33:27.346Z",
-        "motivoReprovacao": "aguardando"
+        "motivoReprovacao": "recusado",
+        "dataAprovOuReprov": "2022-12-19T23:11:41.814Z"
       },
       "id": 9
+    },
+    {
+      "endereco": {
+        "logradouro": "lalalalala",
+        "numero": 6,
+        "cep": "82695833",
+        "cidade": "Curitiba",
+        "estado": "PA"
+      },
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2022-12-19T23:08:09.710Z",
+        "limite": 3294,
+        "motivoReprovacao": "aguardando"
+      },
+      "email": "la",
+      "cpf": "37783170080",
+      "telefone": "41659826655",
+      "salario": 6588,
+      "status": false,
+      "id": 10
+    },
+    {
+      "endereco": {
+        "logradouro": "Cidade",
+        "numero": 69,
+        "cep": "82365980",
+        "cidade": "Curitiba",
+        "estado": "PA"
+      },
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2022-12-19T23:11:14.633Z",
+        "limite": 3299,
+        "motivoReprovacao": "aprovado",
+        "dataAprovOuReprov": "2022-12-19T23:11:27.947Z"
+      },
+      "nome": "mememememe",
+      "email": "me",
+      "cpf": "65824440000",
+      "telefone": "32659888659",
+      "salario": 6598,
+      "status": true,
+      "id": 11
     }
   ],
   "enderecos": [
