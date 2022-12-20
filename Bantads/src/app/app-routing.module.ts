@@ -15,6 +15,11 @@ import { ListarTodosClientesComponent } from './gerente/listar-todos-clientes/li
 import { ModalRecusarClienteComponent } from './gerente/modal/modal-recusar-cliente/modal-recusar-cliente.component';
 import { Top5Component } from './gerente/top5/top5.component';
 import { ConsultarClienteComponent } from './gerente/consultar-cliente/consultar-cliente.component';
+import { HomeAdmComponent } from './administrador/home-adm/home-adm.component';
+import { ListarAdmComponent } from './administrador/listar-adm/listar-adm.component';
+import { EditarAdmComponent } from './administrador/editar-adm/editar-adm.component';
+import { ConsultarClientesAdmComponent } from './administrador/consultar-clientes-adm/consultar-clientes-adm.component';
+import { CriarAdmComponent } from './administrador/criar-adm/criar-adm.component';
 
 
 const routes: Routes = [
@@ -136,6 +141,44 @@ const routes: Routes = [
       role: 'GERENTE'
     },
   },
+  { path: 'adm',
+      redirectTo: 'adm/home'
+    },
+    { path: 'adm/home',
+      component: HomeAdmComponent,
+      canActivate: [AuthGuard],
+      data: {
+        role: 'ADMIN'
+      }
+    },
+    { path: 'adm/lista',
+      component: ListarAdmComponent,
+      canActivate: [AuthGuard],
+      data: {
+        role: 'ADMIN'
+      }
+    },
+    { path: 'adm/criar',
+      component: CriarAdmComponent,
+      canActivate: [AuthGuard],
+      data: {
+        role: 'ADMIN'
+      }
+    },
+    { path: 'adm/editar',
+      component: EditarAdmComponent,
+      canActivate: [AuthGuard],
+      data: {
+        role: 'ADMIN'
+      }
+    },
+    { path: 'adm/consulta',
+      component:ConsultarClientesAdmComponent,
+      canActivate: [AuthGuard],
+      data: {
+        role: 'ADMIN'
+      }
+    },
   
   {
     path: 'login',

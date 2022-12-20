@@ -203,31 +203,10 @@
         "dataAprovOuReprov": "2022-12-19T23:11:41.814Z"
       },
       "id": 9
-    },
+
     {
       "endereco": {
-        "logradouro": "lalalalala",
-        "numero": 6,
-        "cep": "82695833",
-        "cidade": "Curitiba",
-        "estado": "PA"
-      },
-      "conta": {
-        "numeroConta": 1,
-        "dataCriacao": "2022-12-19T23:08:09.710Z",
-        "limite": 3294,
-        "motivoReprovacao": "aguardando"
-      },
-      "email": "la",
-      "cpf": "37783170080",
-      "telefone": "41659826655",
-      "salario": 6588,
-      "status": false,
-      "id": 10
-    },
-    {
-      "endereco": {
-        "logradouro": "Cidade",
+       "logradouro": "Cidade",
         "numero": 69,
         "cep": "82365980",
         "cidade": "Curitiba",
@@ -246,6 +225,7 @@
       "telefone": "32659888659",
       "salario": 6598,
       "status": true,
+
       "id": 11
     }
   ],

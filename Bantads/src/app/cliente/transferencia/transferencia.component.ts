@@ -1,4 +1,4 @@
-import { Transferencia } from '../../shared/models/Transferencia.model';
+import { Transferencia } from 'src/app/shared/models/transferencia.model';
 import { TransferenciaService } from './../services/transferencia.service';
 import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
