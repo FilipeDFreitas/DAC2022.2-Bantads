@@ -203,31 +203,9 @@
         "dataAprovOuReprov": "2022-12-19T23:11:41.814Z"
       },
       "id": 9
-
-    {
-      "endereco": {
-       "logradouro": "Cidade",
-        "numero": 69,
-        "cep": "82365980",
-        "cidade": "Curitiba",
-        "estado": "PA"
-      },
-      "conta": {
-        "numeroConta": 1,
-        "dataCriacao": "2022-12-19T23:11:14.633Z",
-        "limite": 3299,
-        "motivoReprovacao": "aprovado",
-        "dataAprovOuReprov": "2022-12-19T23:11:27.947Z"
-      },
-      "nome": "mememememe",
-      "email": "me",
-      "cpf": "65824440000",
-      "telefone": "32659888659",
-      "salario": 6598,
-      "status": true,
-
-      "id": 11
     }
+
+   
   ],
   "enderecos": [
     {
