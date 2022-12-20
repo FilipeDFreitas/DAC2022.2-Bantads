@@ -25,7 +25,7 @@ export class SaldoComponent implements OnInit {
   ngOnInit(): void {
     this.cliente = new Cliente(new Endereco(), new Conta(new Gerente()));
     this.loading = false;
-    this.id = "8";
+    this.id = "1";
 
     this.clienteService.buscarPorId(+this.id).subscribe(cliente =>
       { this.cliente = cliente;});

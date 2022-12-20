@@ -33,7 +33,7 @@ export class ClienteDadosComponent implements OnInit {
 
     this.cliente = new Cliente(new Endereco());
     this.loading = false;
-    this.id = "2";
+    this.id = "1";
 
     this.clienteService.buscarPorId(+this.id).subscribe(cliente => {
         this.cliente = cliente;

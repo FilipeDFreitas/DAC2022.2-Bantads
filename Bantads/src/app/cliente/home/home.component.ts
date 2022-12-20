@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.cliente = new Cliente();
     this.loading = false;
-    this.id = "2";
+    this.id = "1";
 
     this.clienteService.buscarPorId(+this.id).subscribe(cliente =>
       { this.cliente = cliente;});
