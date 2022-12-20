@@ -203,9 +203,51 @@
         "dataAprovOuReprov": "2022-12-19T23:11:41.814Z"
       },
       "id": 9
+    },
+    {
+      "endereco": {
+        "logradouro": "sasdjiasd",
+        "numero": 789123,
+        "cep": "23145612",
+        "cidade": "assdaasdsdaasd",
+        "estado": "PR"
+      },
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2022-12-20T00:30:54.105Z",
+        "limite": 3743061728,
+        "motivoReprovacao": "aguardando"
+      },
+      "nome": "sagyuasdhuioasdhui",
+      "email": "pjioashujiasd",
+      "cpf": "56443124561",
+      "telefone": "69082638923",
+      "salario": 7486123456,
+      "status": false,
+      "id": 10
+    },
+    {
+      "endereco": {
+        "logradouro": "sdffghgfhfgh",
+        "numero": 565767,
+        "cep": "32434576",
+        "cidade": "adsfdfgg",
+        "estado": "PI"
+      },
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2022-12-20T00:31:58.114Z",
+        "limite": 1672728283.5,
+        "motivoReprovacao": "aguardando"
+      },
+      "nome": "sdasdafdfg",
+      "email": "asadad",
+      "cpf": "34455544342",
+      "telefone": "23436756767",
+      "salario": 3345456567,
+      "status": false,
+      "id": 11
     }
-
-   
   ],
   "enderecos": [
     {

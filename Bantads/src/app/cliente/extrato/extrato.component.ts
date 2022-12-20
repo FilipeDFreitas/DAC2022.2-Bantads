@@ -1,4 +1,4 @@
-import { Transferencia } from 'src/app/shared/models/Transferencia.model';
+import { Transferencia } from 'src/app/shared/models/transferencia.model';
 import { Component, Input, OnInit } from '@angular/core';
 import { DepositarService } from '../services/depositar.service';
 import { TransferenciaService } from '../services/transferencia.service';
