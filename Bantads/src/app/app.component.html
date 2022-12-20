@@ -36,8 +36,31 @@
                 </div>
             </li>
             <!-- Menu do administrador -->
+            <li *ngIf="usuarioLogado.perfil==='ADMIN'" class="nav-item">
+                <a class="navbar-brand" href="#" routerLink="/clientes">
+                    <img src="../assets/simboloBancoInvertido.jpg" width="33" height="33"
+                        class="d-inline-block align-top" alt="Logo do sistema" />
+                    <span class="text-white-50 h4 c-title">BANTADS</span>
+                </a>
+                <div class="container">
+                    <ul class="navbar-nav text-white">
+                        <li class="nav-item">
+                            <a class="nav-link active" [routerLink]="['/adm/home']" href="">Início</a>
+                        </li>
+                        <li class="nav-item">
 
-            <!-- Menu do gerente -->
+                            <a class="nav-link" [routerLink]="['/adm/consulta']" href="">Relatório de Clientes</a>
+
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" [routerLink]="['/adm/lista']" href="">Gerentes</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+                <!-- Menu do gerente -->
             <li *ngIf="usuarioLogado.perfil==='GERENTE'" class="nav-item">
 
                 <div class="container">
@@ -64,13 +87,12 @@
             </li>
         </div>
         <div *ngIf="usuarioLogado" class="form-inline">
-            <a class="btn btn-sm btn-outline-danger text-white my-2 my-sm-0"
-              href="#" (click)="logout()">
-                  <i class="fas fa-door-open"></i>
-                  Sair
+            <a class="btn btn-sm btn-outline-danger text-white my-2 my-sm-0" href="#" (click)="logout()">
+                <i class="fas fa-door-open"></i>
+                Sair
             </a>
         </div>
-       
+
     </nav>
 </header>
 <router-outlet></router-outlet>

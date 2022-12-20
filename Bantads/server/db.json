@@ -201,6 +201,49 @@
         "motivoReprovacao": "aguardando"
       },
       "id": 9
+    },
+    {
+      "endereco": {
+        "logradouro": "33assdasdasd",
+        "numero": 23434,
+        "cep": "23345675678",
+        "cidade": "sdfsdfg",
+        "estado": "PE"
+      },
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2022-12-19T23:49:36.826Z",
+        "limite": 11727,
+        "motivoReprovacao": "aguardando"
+      },
+      "email": "sdf",
+      "cpf": 923268,
+      "telefone": 23423435345,
+      "salario": 23454,
+      "status": false,
+      "id": 10
+    },
+    {
+      "endereco": {
+        "logradouro": "1235456dxvcxv",
+        "numero": 3456,
+        "cep": "234545677",
+        "cidade": "CURITIBA",
+        "estado": "PR"
+      },
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2022-12-19T23:50:57.270Z",
+        "limite": 1171772.5,
+        "motivoReprovacao": "aguardando"
+      },
+      "nome": "sdxdffxvg",
+      "email": "sdfsdff",
+      "cpf": 67678678768678,
+      "telefone": 432445676,
+      "salario": 2343545,
+      "status": false,
+      "id": 11
     }
   ],
   "enderecos": [
