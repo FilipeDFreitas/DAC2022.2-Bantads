@@ -1,2 +1,4 @@
-Bantads/.angular/cache/
- 
+.angular/
+node_modules/
+Bantads/node_modules/__ngcc_entry_points__.json
+

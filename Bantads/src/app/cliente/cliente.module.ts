@@ -12,6 +12,9 @@ import { SaqueComponent } from './saque/saque.component';
 import { TransferenciaComponent } from './transferencia/transferencia.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
+
 import { FormsModule } from '@angular/forms';
 import { TransferenciaService } from './services/transferencia.service';
 import { registerLocaleData } from '@angular/common';
@@ -19,6 +22,7 @@ import localePT from '@angular/common/locales/pt';
 import localeES from '@angular/common/locales/es';
 import localeDE from '@angular/common/locales/de';
 import localeFR from '@angular/common/locales/fr';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 registerLocaleData(localePT);
 registerLocaleData(localeES);
 registerLocaleData(localeDE);
@@ -40,7 +44,9 @@ registerLocaleData(localeFR);
     RouterModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [
     TransferenciaService,

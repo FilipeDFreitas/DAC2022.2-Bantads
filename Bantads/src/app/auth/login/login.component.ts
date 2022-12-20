@@ -92,7 +92,7 @@ export class LoginComponent implements OnInit {
       this.cliente.conta.dataCriacao = new Date();
 
       this.cliente.conta.gerente = undefined;
-      this.cliente.conta.limite = ((this.cliente.salario!)/2);
+      this.cliente.conta.limite =  ((this.cliente.salario!)/2);
 
       this.cliente.conta.motivoReprovacao = "aguardando";
       this.cliente.conta.numeroConta = this.idConta+1;

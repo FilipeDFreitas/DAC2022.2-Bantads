@@ -169,16 +169,17 @@
       "cpf": 14447471213,
       "telefone": 41999999999,
       "salario": 8500,
-      "status": false,
+      "status": true,
       "conta": {
         "numeroConta": 1,
         "dataCriacao": "2022-12-18T23:44:01.813Z",
         "limite": 3900,
-        "motivoReprovacao": "aguardando",
+        "motivoReprovacao": "aprovado",
         "saldo": 0,
         "gerente": {
           "nome": "Carlos Eduardo"
-        }
+        },
+        "dataAprovOuReprov": "2022-12-19T23:11:32.500Z"
       },
       "id": 8
     },
@@ -198,51 +199,33 @@
       "conta": {
         "numeroConta": 1,
         "dataCriacao": "2022-12-18T22:33:27.346Z",
-        "motivoReprovacao": "aguardando"
+        "motivoReprovacao": "recusado",
+        "dataAprovOuReprov": "2022-12-19T23:11:41.814Z"
       },
       "id": 9
-    },
+
     {
       "endereco": {
-        "logradouro": "33assdasdasd",
-        "numero": 23434,
-        "cep": "23345675678",
-        "cidade": "sdfsdfg",
-        "estado": "PE"
+       "logradouro": "Cidade",
+        "numero": 69,
+        "cep": "82365980",
+        "cidade": "Curitiba",
+        "estado": "PA"
       },
       "conta": {
         "numeroConta": 1,
-        "dataCriacao": "2022-12-19T23:49:36.826Z",
-        "limite": 11727,
-        "motivoReprovacao": "aguardando"
+        "dataCriacao": "2022-12-19T23:11:14.633Z",
+        "limite": 3299,
+        "motivoReprovacao": "aprovado",
+        "dataAprovOuReprov": "2022-12-19T23:11:27.947Z"
       },
-      "email": "sdf",
-      "cpf": 923268,
-      "telefone": 23423435345,
-      "salario": 23454,
-      "status": false,
-      "id": 10
-    },
-    {
-      "endereco": {
-        "logradouro": "1235456dxvcxv",
-        "numero": 3456,
-        "cep": "234545677",
-        "cidade": "CURITIBA",
-        "estado": "PR"
-      },
-      "conta": {
-        "numeroConta": 1,
-        "dataCriacao": "2022-12-19T23:50:57.270Z",
-        "limite": 1171772.5,
-        "motivoReprovacao": "aguardando"
-      },
-      "nome": "sdxdffxvg",
-      "email": "sdfsdff",
-      "cpf": 67678678768678,
-      "telefone": 432445676,
-      "salario": 2343545,
-      "status": false,
+      "nome": "mememememe",
+      "email": "me",
+      "cpf": "65824440000",
+      "telefone": "32659888659",
+      "salario": 6598,
+      "status": true,
+
       "id": 11
     }
   ],
