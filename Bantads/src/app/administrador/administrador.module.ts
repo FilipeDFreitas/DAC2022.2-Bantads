@@ -7,7 +7,8 @@ import { CriarAdmComponent } from './criar-adm/criar-adm.component';
 import { ConsultarClientesAdmComponent } from './consultar-clientes-adm/consultar-clientes-adm.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule} from '@angular/forms';
-import { HomeAdmComponent } from './home-adm/home-adm.component'
+import { HomeAdmComponent } from './home-adm/home-adm.component';
+import { ModalAdmComponent } from './modal-adm/modal-adm.component'
 
 
 
@@ -17,7 +18,8 @@ import { HomeAdmComponent } from './home-adm/home-adm.component'
     EditarAdmComponent,
     CriarAdmComponent,
     ConsultarClientesAdmComponent,
-    HomeAdmComponent
+    HomeAdmComponent,
+    ModalAdmComponent
   ],
   imports: [
     CommonModule,
