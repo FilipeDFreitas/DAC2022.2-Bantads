@@ -120,17 +120,15 @@
                   <input type="text" class="form-control" name="cpf" placeholder="CPF"
                           [(ngModel)]="cliente.cpf"
                           #cpf="ngModel"
-                          minlength = 11
-                          mask="000.000.000-00" required/>
-
-                  <div *ngIf="cpf.errors && (cpf.dirty || cpf.touched)" class="alert alert-danger">
-
-                  <div [hidden]="!cpf.errors?.['required']">
-                      Digite o cpf do cliente.
-                  </div>
-                    <div [hidden]="!cpf.errors?.['minlength']">
-                        O cpf deve conter 11 digitos.
-                    </div>
+                          cpfValidator required
+                          mask="000.000.000-00">
+                    <div *ngIf="cpf.errors && (cpf.dirty || cpf.touched)" class="alert alert-danger">
+                      <div [hidden]="!cpf.errors['required']">
+                        Digite o CPF do cliente.
+                      </div>
+                      <div [hidden]="!cpf.errors['mask'] && !cpf.errors['cpfNotValid']">
+                        CPF inválido.
+                      </div>
                   </div>
                 </div>
               </div>
@@ -196,10 +194,9 @@
                   </span>
                 </div>
                 <input type="text" class="form-control" name="salario" placeholder="Salário"
-                    [(ngModel)]="cliente.salario"
-                    #salario="ngModel"
-                    prefix = "R$"
-                    mask="separator.1"
+                        currencyMask [(ngModel)]="cliente.salario"
+                        [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+                        #salario="ngModel"
                     />
 
                 <div *ngIf="salario.errors && (salario.dirty || salario.touched)" class="alert alert-danger">

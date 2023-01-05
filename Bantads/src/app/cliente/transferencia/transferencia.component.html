@@ -36,8 +36,10 @@
                   <i class="fas fa-money-bill"></i>
                 </span>
               </div>
-              <input type="number" class="form-control" id="valor" name="valor" placeholder="R$ 0000,00"
-                     [(ngModel)]="valor" />
+              <input type="text" class="form-control" id="valor" name="valor"
+                     placeholder="R$ 0000,00"
+                     currencyMask [(ngModel)]="valor"
+                    [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }" />
             </div>
           </div>
         </div>
