@@ -165,7 +165,7 @@ const routes: Routes = [
         role: 'ADMIN'
       }
     },
-    { path: 'adm/editar',
+    { path: 'adm/editar/:id',
       component: EditarAdmComponent,
       canActivate: [AuthGuard],
       data: {

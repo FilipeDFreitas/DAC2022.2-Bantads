@@ -1,15 +1,28 @@
 <div class="modal-header">
-    <button type="button" class="close" aria-label="Fechar"(click)="activeModal.dismiss()">
-        <span aria-hidden="true">&times;</span> 
-    </button>
-    <h4 class="modal-title" id="modal Label"> Pessoa </h4>
+
+    <h4 class="modal-title" id="modal Label"> Gerente </h4>
 </div>
-<div class="modal-body text-center">
-    <div>
+<div class="modal-body">
+    <div class="row">
+    <div class="col-6">
+        <p><b>Geral</b></p>
+        <p></p>
         <p>Nome: {{ gerente.nome}} </p>
         <p>CPF: {{ gerente.cpf!}}</p>
         <p>Email: {{gerente.email }}</p>
         <p>Telefone: {{gerente.telefone }}</p>
+        <p>Data de Nascimento: {{ gerente.dataNascimento}} </p>
+    </div>
+    <div class="col-6">
+        <p><b>Endereço</b></p>
+        <p></p>
+        <p>CEP: {{gerente.endereco?.cep }}</p>
+        <p>Cidade: {{gerente.endereco?.cidade }}</p>
+        <p>Complemento: {{gerente.endereco?.complemento }}</p>
+        <p>Estado: {{gerente.endereco?.estado }}</p>
+        <p>Numero: {{gerente.endereco?.numero }}</p>
+        <p>Bairro: {{gerente.endereco?.logradouro}}</p>
+    </div>    
     </div>
 </div>
 <div class="modal-footer">

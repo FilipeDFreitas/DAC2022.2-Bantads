@@ -6,6 +6,7 @@ export class Gerente {
     public id?: number,
     public nome?: string,
     public email?: string,
+    public dataNascimento?: string,
     public cpf?: number,
     public telefone?: number,
     public salario?: number,

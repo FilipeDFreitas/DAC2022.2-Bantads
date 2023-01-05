@@ -31,7 +31,7 @@ export class ListarAdmComponent implements OnInit {
     }
   }
   abrirModal(gerente: Gerente){
-    const modalRef = this.modalService.open(ModalAdmComponent);
+    const modalRef = this.modalService.open(ModalAdmComponent,{ windowClass: 'modal-xl'});
     modalRef.componentInstance.gerente=gerente;
   }
 
