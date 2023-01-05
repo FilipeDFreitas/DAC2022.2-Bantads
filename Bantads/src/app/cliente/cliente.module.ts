@@ -23,6 +23,8 @@ import localeES from '@angular/common/locales/es';
 import localeDE from '@angular/common/locales/de';
 import localeFR from '@angular/common/locales/fr';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { SharedModule } from '../shared';
 registerLocaleData(localePT);
 registerLocaleData(localeES);
 registerLocaleData(localeDE);
@@ -46,7 +48,9 @@ registerLocaleData(localeFR);
     HttpClientModule,
     AppRoutingModule,
     NgbModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    CurrencyMaskModule,
+    SharedModule
   ],
   providers: [
     TransferenciaService,

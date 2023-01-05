@@ -247,6 +247,29 @@
       "salario": 3345456567,
       "status": false,
       "id": 11
+    },
+    {
+      "endereco": {
+        "logradouro": "Rua Marcilio Dias",
+        "numero": 315,
+        "cep": "82820000",
+        "cidade": "aaa",
+        "estado": "PR",
+        "complemento": "xx"
+      },
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2023-01-05T00:39:33.717Z",
+        "limite": 6000,
+        "motivoReprovacao": "aguardando"
+      },
+      "nome": "as",
+      "email": "aa@aaax",
+      "cpf": "00000000000",
+      "telefone": "41996256587",
+      "salario": 12000,
+      "status": false,
+      "id": 12
     }
   ],
   "enderecos": [
@@ -392,6 +415,27 @@
       "data": "2022-12-19T04:27:18.368Z",
       "tipo": "transferencia",
       "id": 21
+    },
+    {
+      "valor": 850,
+      "data": "2023-01-04T23:32:21.950Z",
+      "tipo": "deposito",
+      "destino": "1",
+      "id": 22
+    },
+    {
+      "valor": 1005,
+      "data": "2023-01-04T23:35:37.114Z",
+      "tipo": "saque",
+      "destino": "1",
+      "id": 23
+    },
+    {
+      "valor": 540.55,
+      "destino": 0,
+      "data": "2023-01-04T23:37:11.186Z",
+      "tipo": "transferencia",
+      "id": 24
     }
   ]
 }

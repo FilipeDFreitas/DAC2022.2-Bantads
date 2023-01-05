@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClienteService } from 'src/app/cliente/services/cliente.service';
 import { Cliente, Endereco, Login, Conta } from 'src/app/shared';
@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
   login: Login = new Login();
   loading: boolean = false;
   message!: string;
+  form!: FormGroup;
 
   //cadastro
   public endereco = new Endereco();
@@ -32,8 +33,8 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService,
     private clienteService: ClienteService, // parte do cadastro
     private router: Router,
-    private route: ActivatedRoute) {}
-
+    private route: ActivatedRoute) {
+     }
 
 
   ngOnInit(): void {
@@ -104,5 +105,4 @@ export class LoginComponent implements OnInit {
     this.formCliente.reset();
     }
   }
-
 }

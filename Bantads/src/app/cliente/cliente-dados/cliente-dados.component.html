@@ -89,10 +89,9 @@
           </span>
         </div>
         <input type="text" class="form-control" name="salario" placeholder="Salário"
-              [(ngModel)]="cliente.salario"
-              #salario="ngModel"
-              prefix = "R$"
-              mask="separator.1" />
+              currencyMask [(ngModel)]="cliente.salario"
+              [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+              #salario="ngModel" />
 
         <div *ngIf="salario.errors && (salario.dirty || salario.touched)" class="alert alert-danger">
 
