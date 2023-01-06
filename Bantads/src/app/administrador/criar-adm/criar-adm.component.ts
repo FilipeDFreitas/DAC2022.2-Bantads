@@ -27,7 +27,7 @@ export class CriarAdmComponent implements OnInit {
   inserir(): void{
     if(this.formAdm.form.valid) {
       this.gerente.endereco = this.endereco;
-      this.administradorService.inserir(this.gerente);
+      this.administradorService.inserir(this.gerente).subscribe();
       this.router.navigate( ["/adm/lista"] );
     }
   }

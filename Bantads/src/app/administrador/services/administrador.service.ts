@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Gerente } from 'src/app/shared';
+import { Administrador, Gerente } from 'src/app/shared';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
 const LS_CHAVE: string = "contas";
 @Injectable({
   providedIn: 'root'
@@ -7,45 +10,41 @@ const LS_CHAVE: string = "contas";
 export class AdministradorService {
   
 
-  constructor() { }
+  BASE_URL = "http://localhost:3000/gerentes/";
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  };
+
+  constructor(private httpClient: HttpClient) { }
 
 //
 //RELACIONADO A GERENTE
 //
-  listarGerentes(): Gerente[] {
-    const gerentes = localStorage[LS_CHAVE];
-
-    return gerentes ? JSON.parse(gerentes) : [];
+  listarGerentes(): Observable<Gerente[]> {
+    return this.httpClient.get<Gerente[]>(this.BASE_URL,
+      this.httpOptions);
   }
 
-  remover(id: number):void{
-    let gerentes: Gerente[] = this.listarGerentes();
-    gerentes = gerentes.filter(gerente => gerente.id !== id);
-
-    localStorage[LS_CHAVE] = JSON.stringify(gerentes);
+  remover(id: number| undefined): Observable<Gerente> {
+    return this.httpClient.delete<Gerente>(this.BASE_URL + id,
+      this.httpOptions);
   }
 
-  inserir(gerente: Gerente) {
-    const gerentes = this.listarGerentes();
-
-    gerente.id = new Date().getTime();
-
-    gerentes.push(gerente);
-
-    localStorage[LS_CHAVE] = JSON.stringify(gerentes);
+  inserir(gerente: Gerente): Observable<Gerente> {
+    return this.httpClient.post<Gerente>(this.BASE_URL,
+      JSON.stringify(gerente),
+      this.httpOptions);
   }
-  buscarGerentePorId(id: number): Gerente | undefined {
-    const pessoas: Gerente[] = this.listarGerentes();
-    return pessoas.find(pessoa => pessoa.id === id);
+  buscarGerentePorId(id: number): Observable<Gerente> {
+    return this.httpClient.get<Gerente>(this.BASE_URL + id,
+      this.httpOptions);
   }
-  atualizarGerente (gerente : Gerente): void{
-    const gerentes = this.listarGerentes();
-    gerentes.forEach((obj, index, objs) =>{
-      if (gerente.id === obj.id){
-        objs[index] = gerente
-      }
-    });
-    localStorage[LS_CHAVE] = JSON.stringify(gerentes);
+  atualizarGerente (gerente : Gerente): Observable<Gerente> {
+    return this.httpClient.put<Gerente>(this.BASE_URL + gerente.id,
+      JSON.stringify(gerente),
+      this.httpOptions);
   }
 //
 //RELACIONADO A GERENTE

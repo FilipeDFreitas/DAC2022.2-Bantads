@@ -21,25 +21,26 @@ export class EditarAdmComponent implements OnInit {
     ) {}
 
   ngOnInit(): void {
+    this.endereco = new Endereco;
+    this.endereco.cidade= "caralho";
     let id= +this.route.snapshot.params['id'];
-    const res = this.administradorService.buscarGerentePorId(id);
-    if (res !== undefined){
-      this.gerente = res;
-
-      if (this.gerente.endereco !== undefined)
-        this.endereco = this.gerente.endereco;
-      else
-      this.endereco = new Endereco;
+    this.administradorService.buscarGerentePorId(id).subscribe(gerente => {
+      this.gerente = gerente;
+    });
+    if(this.gerente.endereco !== undefined){
+      this.endereco = this.gerente.endereco;
+      
     }
-    else
-      throw new Error ("Gerente não encontrado: id + "+ id);
+    this.gerente.nome ="caralho";
+    
     
   }
   editar(): void{
     if(this.formAdm.form.valid) {
       this.gerente.endereco = this.endereco;
-      this.administradorService.atualizarGerente(this.gerente);
-      this.router.navigate( ["/adm/lista"] );
+      this.administradorService.atualizarGerente(this.gerente).subscribe(gerente => {
+        this.router.navigate( ["/adm/lista"] );});
+      
     }
   }
 }
