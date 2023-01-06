@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
+import { Gerente,Endereco } from 'src/app/shared';
+import { AdministradorService } from '../services/administrador.service';
 
 @Component({
   selector: 'app-criar-adm',
@@ -6,10 +10,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./criar-adm.component.css']
 })
 export class CriarAdmComponent implements OnInit {
+  @ViewChild('formAdm') formAdm! : NgForm;
+  gerente! : Gerente;
+  endereco! :Endereco;
 
-  constructor() { }
+  constructor(
+    private administradorService: AdministradorService,
+    private router: Router
+
+  ) { }
 
   ngOnInit(): void {
+    this.gerente = new Gerente;
+    this.endereco = new Endereco;
+  }
+  inserir(): void{
+    if(this.formAdm.form.valid) {
+      this.gerente.endereco = this.endereco;
+      this.administradorService.inserir(this.gerente).subscribe();
+      this.router.navigate( ["/adm/lista"] );
+    }
   }
 
 }

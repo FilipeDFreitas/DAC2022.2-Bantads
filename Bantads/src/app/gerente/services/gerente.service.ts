@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Cliente } from 'src/app/shared';
+import { Cliente, Gerente } from 'src/app/shared';
 
 
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -9,12 +9,15 @@ import { Observable } from 'rxjs';
 
 
 
-//const LS_CHAVE: string = "contas";
+const LS_CHAVE: string = "contas";
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class GerenteService {
+  
+  
 
   BASE_URL = "http://localhost:3000/clientes/";
   httpOptions = {
@@ -48,10 +51,6 @@ export class GerenteService {
     return this.httpClient.put<Cliente>
       (this.BASE_URL + cliente.id, JSON.stringify(cliente), this.httpOptions);
   }
-  
-  
-
-
 
 
   // listarClientes(): Cliente[]{

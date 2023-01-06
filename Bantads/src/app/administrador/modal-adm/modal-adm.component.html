@@ -1,0 +1,30 @@
+<div class="modal-header">
+
+    <h4 class="modal-title" id="modal Label"> Gerente </h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+    <div class="col-6">
+        <p><b>Geral</b></p>
+        <p></p>
+        <p>Nome: {{ gerente.nome}} </p>
+        <p>CPF: {{ gerente.cpf!}}</p>
+        <p>Email: {{gerente.email }}</p>
+        <p>Telefone: {{gerente.telefone }}</p>
+        <p>Data de Nascimento: {{ gerente.dataNascimento}} </p>
+    </div>
+    <div class="col-6">
+        <p><b>Endereço</b></p>
+        <p></p>
+        <p>CEP: {{gerente.endereco?.cep }}</p>
+        <p>Cidade: {{gerente.endereco?.cidade }}</p>
+        <p>Complemento: {{gerente.endereco?.complemento }}</p>
+        <p>Estado: {{gerente.endereco?.estado }}</p>
+        <p>Numero: {{gerente.endereco?.numero }}</p>
+        <p>Bairro: {{gerente.endereco?.logradouro}}</p>
+    </div>    
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark"       (click)="activeModal.close()">Fechar</button>
+</div>

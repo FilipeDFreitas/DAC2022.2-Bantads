@@ -7,14 +7,16 @@
     <!-- Corpo da página -->
     <main class="container">
       <h2 class="mb-4">
-        Funcionário/Gerente #809 (Josnei)
+        Gerente #{{gerente.id}} ({{ gerente.nome}})
       </h2>
 
       <!-- Formulário dos dados do usuário -->
-      <form action="colaboradores.html" method="POST" class="mt-5">
+      <form #formAdm="ngForm">
         <div class="row">
           <div class="col-12 jsutify-content-between">
-            <button type="submit" class="btn btn-primary float-right w-25">
+            <button type="submit" class="btn btn-primary float-right w-25"
+            (click)="editar()"
+            [disabled]="!formAdm.form.valid">
               <i class="far fa-save"></i>
               Salvar
             </button>
@@ -29,7 +31,12 @@
                     <i class="fas fa-user"></i>
                   </span>
                 </div>
-                <input type="text" id="cliente-nome" class="form-control" value="Josnei Ornitorrinco da Silva" />
+                <input type="text" id="gerente-nome" id="nome" name="nome" class="form-control" value="" [(ngModel)]="gerente.nome" #nome="ngModel" minlength="10" required/>
+                
+              </div>
+              <div *ngIf="nome.errors && (nome.dirty||nome.touched)" class="alert alert-danger">
+                <div [hidden]="!nome.errors['required'] " > Digite o nome do gerente. </div>
+                <div [hidden]="!nome.errors['minlength'] "> O nome deve conter ao menos 10 caracteres. </div>
               </div>
             </div>
             <div class="form-group">
@@ -40,7 +47,12 @@
                     <i class="fab fa-slack-hash"></i>
                   </span>
                 </div>
-                <input type="text" id="cliente-cpf" class="form-control" value="123.456.789-10" readonly />
+                <input type="text" id="cpf" name="cpf" class="form-control" value="" [(ngModel)]="gerente.cpf" #cpf="ngModel" minlength="11" required />
+                
+              </div>
+              <div *ngIf="cpf.errors && (nome.dirty||nome.touched)" class="alert alert-danger">
+                <div [hidden]="!cpf.errors['required'] " > Digite o CPF. </div>
+                <div [hidden]="!cpf.errors['minlength'] "> Digite corretamente o CPF. </div>
               </div>
             </div>
             <div class="form-group">
@@ -51,8 +63,17 @@
                     <i class="far fa-calendar-alt"></i>
                   </span>
                 </div>
-                <input type="date" id="cliente-data-nasc" class="form-control" name="data_nasc" value="2000-06-24" />
+                <input type="text" class="form-control" id="data" name="data" [(ngModel)]="gerente.dataNascimento"
+                #dataNascimento="ngModel" mask="d0/M0/0000"
+                required/>
+                
               </div>
+              <div *ngIf="dataNascimento.errors && (dataNascimento.dirty|| dataNascimento.touched)"
+                class="alert alert-danger">
+                <div [hidden]="!dataNascimento.errors['required']">Digite a data de nascimento da pessoa.
+                  
+                </div>
+                </div>
             </div>
             <div class="form-group">
               <label for="cliente-email">Email de acesso:</label>
@@ -62,8 +83,12 @@
                     <i class="fas fa-at"></i>
                   </span>
                 </div>
-                <input type="email" id="cliente-email" class="form-control" value="josnei@email.com" />
+                <input type="text" id="email" name="email" class="form-control" value="" [(ngModel)]="gerente.email" #email="ngModel" required  />
+                
               </div>
+              <div *ngIf="email.errors && (email.dirty||email.touched)" class="alert alert-danger">
+                <div [hidden]="!email.errors['required'] " > Digite o Email. </div>
+            </div>
             </div>
             <div class="form-group">
               <label for="cliente-telefone">Telefone de contato:</label>
@@ -73,8 +98,12 @@
                     <i class="fas fa-mobile-alt"></i>
                   </span>
                 </div>
-                <input type="text" id="cliente-telefone" class="form-control" value="(41) 99988-8777" />
+                <input type="text" id="telefone" name="telefone" class="form-control" value="" [(ngModel)]="gerente.telefone" #telefone="ngModel" required/>
+                
               </div>
+            </div>
+            <div *ngIf="telefone.errors && (telefone.dirty||telefone.touched)" class="alert alert-danger">
+              <div [hidden]="!telefone.errors['required'] " > Digite o telefone. </div>
             </div>
           </div>
           <div class="col-12 col-md-6">
@@ -86,12 +115,17 @@
                     <i class="fas fa-map-marker-alt"></i>
                   </span>
                 </div>
-                <input type="text" id="cliente-cep" class="form-control" name="cep" value="82510-100" />
+                <input type="text" id="cep" name="cep" class="form-control" value="" [(ngModel)]="endereco.cep" #cep="ngModel" required/>
+                
                 <div class="input-group-append">
                   <button class="btn btn-secondary" type="button" id="buscar-cep">
                     Buscar CEP
                   </button>
                 </div>
+
+              </div>
+              <div *ngIf="cep.errors && (cep.dirty||cep.touched)" class="alert alert-danger">
+                <div [hidden]="!cep.errors['required'] " > Digite o CEP. </div>
               </div>
             </div>
             <div class="form-group">
@@ -102,24 +136,11 @@
                     <i class="fas fa-map"></i>
                   </span>
                 </div>
-                <input type="text" id="cliente-rua" class="form-control" name="rua" value="Rua Venezuela" readonly />
+                <input type="text" id="cliente-rua" class="form-control" name="rua" value="" readonly />
               </div>
             </div>
             <div class="row">
-              <div class="col-6">
-                <div class="form-group">
-                  <label for="cliente-numero">Endereço:</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">
-                        <i class="fas fa-map-marked-alt"></i>
-                      </span>
-                    </div>
-                    <input type="number" id="cliente-numero" class="form-control" name="numero" value="220" />
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
+              <div>
                 <div class="form-group">
                   <label for="cliente-complemento">Complemento:</label>
                   <input type="text" id="cliente-complemento" class="form-control" name="complemento" value="" />
@@ -128,19 +149,19 @@
             </div>
             <div class="form-group">
               <label for="cliente-cidade">Cidade:</label>
-              <input type="text" id="cliente-cidade" class="form-control" name="cidade" value="Curitiba" readonly />
+              <input type="text" id="cliente-cidade" class="form-control" name="cidade" value="" readonly/>
             </div>
             <div class="row">
               <div class="col-6">
                 <div class="form-group">
                   <label for="cliente-estado">Estado:</label>
-                  <input type="text" id="cliente-estado" class="form-control" name="estado" value="PR" readonly />
+                  <input type="text" id="cliente-estado" class="form-control" name="estado" value="" readonly/>
                 </div>
               </div>
               <div class="col-6">
                 <div class="form-group">
                   <label for="cliente-pais">País:</label>
-                  <input type="text" id="cliente-pais" class="form-control" value="Brasil" readonly />
+                  <input type="text" id="cliente-pais" class="form-control" value="" readonly/>
                 </div>
               </div>
             </div>

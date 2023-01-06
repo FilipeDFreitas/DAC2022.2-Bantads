@@ -21,6 +21,20 @@
       "perfil": "CLIENTE"
     }
   ],
+  "gerentes": [
+    {
+      "endereco": {
+        "cep": "fdsfafddsf",
+        "cidade": "caralho"
+      },
+      "nome": "Filipe  de Freitas Martins da Silva",
+      "email": "filipe@programmer.net",
+      "dataNascimento": "05/12/1994",
+      "cpf": "09328024946",
+      "telefone": "(41)984603891",
+      "id": 3
+    }
+  ],
   "clientes": [
     {
       "id": 1,
@@ -216,14 +230,15 @@
         "numeroConta": 1,
         "dataCriacao": "2022-12-20T00:30:54.105Z",
         "limite": 3743061728,
-        "motivoReprovacao": "aguardando"
+        "motivoReprovacao": "aprovado",
+        "dataAprovOuReprov": "2023-01-06T19:32:57.320Z"
       },
       "nome": "sagyuasdhuioasdhui",
       "email": "pjioashujiasd",
       "cpf": "56443124561",
       "telefone": "69082638923",
       "salario": 7486123456,
-      "status": false,
+      "status": true,
       "id": 10
     },
     {
