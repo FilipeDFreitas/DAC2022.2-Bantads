@@ -1,8 +1,10 @@
+import { Endereco } from './../../shared/models/endereco.model';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClienteService } from 'src/app/cliente/services/cliente.service';
-import { Cliente, Endereco, Login, Conta } from 'src/app/shared';
+import { Cliente, Login, Conta } from 'src/app/shared';
+import { ConsultaCepService } from 'src/app/shered/services/consulte-cep.service';
 import { LoginService } from '../services/login.service';
 
 @Component({
@@ -10,8 +12,6 @@ import { LoginService } from '../services/login.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-
-
 
 export class LoginComponent implements OnInit {
   @ViewChild('formLogin') formLogin!: NgForm;
@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
     "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA",
     "PB", "PR", "PE", "PI", "RJ", "RN", "RS", "RO", "RR", "SC", "SP", "SE", "TO"
   ];
+
   public conta = new Conta();
   public idConta = 0;
 
@@ -33,8 +34,31 @@ export class LoginComponent implements OnInit {
     private loginService: LoginService,
     private clienteService: ClienteService, // parte do cadastro
     private router: Router,
-    private route: ActivatedRoute) {
+    private route: ActivatedRoute,
+    //private cepService: ConsultaCepService
+    ) {
      }
+
+ // consultaCep(valor, form) {
+  //  this.cepService.busca(valor).subscribe((endereco) => this.populaForm(endereco, form))
+ // }
+
+ //Por no html:      (blur)="consultaCep(applyFilter($event), formCliente)"
+
+  //populaForm(endereco, form) {
+   // form.setValue({
+    //  cep: endereco.cep,
+     // logradouro: endereco.logradouro,
+     // bairro: endereco.bairro,
+     // cidade: endereco.localidade,
+     // uf: endereco.uf
+    //})
+ // }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    return filterValue;
+  }
 
 
   ngOnInit(): void {

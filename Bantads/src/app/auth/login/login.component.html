@@ -215,10 +215,11 @@
               </div>
 
               <input type="text" class="form-control" id="cep" name="cep" placeholder="00000-000"
-                  [(ngModel)]="endereco.cep"
-                  #cep="ngModel"
-                  mask="00000-000"
-                  required
+                      [(ngModel)]="endereco.cep"
+                      
+                      #cep="ngModel"
+                      mask="00000-000"
+                      required
               >
 
               <div *ngIf="cep.errors && (cep.dirty || cep.touched)" class="alert alert-danger">
