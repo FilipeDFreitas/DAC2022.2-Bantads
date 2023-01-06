@@ -9,6 +9,7 @@ import { GerenteModule } from './gerente/gerente.module';
 import { AdministradorModule } from './administrador/administrador.module';
 import { AuthModule } from './auth/auth.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 
 
@@ -25,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     AdministradorModule,
     AuthModule,
     HttpClientModule,
+    CurrencyMaskModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

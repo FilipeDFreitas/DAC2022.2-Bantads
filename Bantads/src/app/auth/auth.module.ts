@@ -4,24 +4,25 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './login/login.component';
-//import { NumericoDirective } from '../shared/directives/numerico.directive';
-//import { MeuPipePipe } from '../shared/pipes/meu-pipe.pipe';
 import { NgxMaskModule, IConfig } from 'ngx-mask'
+import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { SharedModule } from '../shared';
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = {};
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    //MinimoValidatorDirective
-    //MeuPipePipe
   ],
   imports: [
     CommonModule,
     FormsModule,
     RouterModule,
     NgbModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    CurrencyMaskModule,
+    SharedModule
+
   ],
   providers: [
     LoginComponent,
