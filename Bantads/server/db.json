@@ -46,7 +46,7 @@
       "email": "aaa@aaa",
       "cpf": 11111111111,
       "telefone": 41999999999,
-      "salario": 5000,
+      "salario": 4000,
       "id": 2
     },
     {
@@ -185,27 +185,6 @@
     },
     {
       "endereco": {
-        "logradouro": "Rua Adelino Alexandrino Marquezini",
-        "numero": 180,
-        "cidade": "Curitiba",
-        "estado": "PR",
-        "complemento": "xx"
-      },
-      "email": "sss@nnn",
-      "cpf": 12587451214,
-      "telefone": 41999999999,
-      "salario": 258,
-      "status": false,
-      "conta": {
-        "numeroConta": 1,
-        "dataCriacao": "2022-12-18T22:33:27.346Z",
-        "motivoReprovacao": "recusado",
-        "dataAprovOuReprov": "2022-12-19T23:11:41.814Z"
-      },
-      "id": 9
-    },
-    {
-      "endereco": {
         "logradouro": "sasdjiasd",
         "numero": 789123,
         "cep": "23145612",
@@ -270,6 +249,27 @@
       "salario": 12000,
       "status": false,
       "id": 12
+    },
+    {
+      "endereco": {
+        "logradouro": "Rua Adelino Alexandrino Marquezini",
+        "numero": 180,
+        "cidade": "Curitiba",
+        "estado": "PR",
+        "complemento": "xx"
+      },
+      "email": "sss@nnn",
+      "cpf": 12587451214,
+      "telefone": 41999999999,
+      "salario": 258,
+      "status": false,
+      "conta": {
+        "numeroConta": 1,
+        "dataCriacao": "2022-12-18T22:33:27.346Z",
+        "motivoReprovacao": "recusado",
+        "dataAprovOuReprov": "2022-12-19T23:11:41.814Z"
+      },
+      "id": 9
     }
   ],
   "enderecos": [
@@ -436,6 +436,27 @@
       "data": "2023-01-04T23:37:11.186Z",
       "tipo": "transferencia",
       "id": 24
+    },
+    {
+      "valor": 50,
+      "data": "2023-01-08T23:28:58.390Z",
+      "tipo": "deposito",
+      "destino": "1",
+      "id": 25
+    },
+    {
+      "valor": 1.5,
+      "data": "2023-01-08T23:29:16.775Z",
+      "tipo": "saque",
+      "destino": "1",
+      "id": 26
+    },
+    {
+      "valor": 250,
+      "destino": 0,
+      "data": "2023-01-08T23:29:27.136Z",
+      "tipo": "transferencia",
+      "id": 27
     }
   ]
 }
